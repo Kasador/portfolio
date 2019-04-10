@@ -1,3 +1,114 @@
-h1 {
-    color: red;
+// === SCSS FOR PORTFOLIO WEBSITE === 
+// color scheme
+$primary-color: #222;
+$secondary-color: #fff;
+$accent-color: #B63F55;
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+
+    // cool affect
+    canvas{
+        background-color: $secondary-color;
+        z-index: -1;
+        position: fixed;
+    }
+
+    // main content
+    main {
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // overflow: hidden;
+        // background-image: url('../images/shp.png');
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-attachment: fixed;
+
+        // flex header
+        .header-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            // Hunter Shaw -- Image
+            .image-hunter {
+                border: 10px solid $primary-color;
+                width: 250px;
+                height: 250px;
+                border-radius: 100%;
+                // padding: 5px;
+                margin: 30px;
+            }
+
+            // header text
+            .header-text {
+                text-align: center;
+                color: $primary-color;
+
+                // titles
+                .header-title {
+                    font-size: 4rem;
+                    padding: 10px;
+
+                    // name 
+                    .header-name {
+                        color: $accent-color;
+                    }
+                }
+                .header-sub-title {
+                    font-size: 5rem;
+                    padding: 10px;
+
+                    // web developer
+                    .header-web {
+                        color: $accent-color;
+                    }
+                }
+            }
+
+            // social medias
+            .social-medias {
+                font-size: 5rem;
+                color: $primary-color;
+
+                // social icons
+                .fab {
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+                .fab:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+         // begin section
+         .begin {
+            background-color: $accent-color;
+            color: $secondary-color;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            span {
+                font-size: 2rem;
+            }
+            .fas {
+                font-size: 4rem;
+                cursor: pointer;
+            }
+        }
+    }
 }
