@@ -257,3 +257,31 @@ arrow.addEventListener('mouseover', () => {
 arrow.addEventListener('mouseout', () => {
     arrowText.style.color = '#222';
 });
+
+// function to remove all active
+function removeActiveAll() {
+    $('.portfolio').removeClass('active');
+    $('.contact').removeClass('active');
+    $('.about').removeClass('active');
+    $('.home').removeClass('active');
+}
+
+// function to check condition
+const checkCondition = (id) => $(this).scrollTop() >= $('#'+id).position().top;
+
+// on scroll, check condition, add active based on condition bool value
+$(document).on('scroll', () => {
+    removeActiveAll();
+    if( checkCondition('contact') ) {
+        $('.contact').addClass('active');
+    } 
+    else if( checkCondition('portfolio') ) {
+        $('.portfolio').addClass('active');
+    }
+    else if( checkCondition('about') ) {
+        $('.about').addClass('active');
+    } 
+    else if( checkCondition('home') ) {
+        $('.home').addClass('active');
+    } 
+});

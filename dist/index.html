@@ -17,7 +17,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $(".arrow").on('click', function(event) {
+  $(".smooth-scrolling").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -31,11 +31,7 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = '';
-      });
+      }, 1000);
     } // End if
   });
   // sticky menu using jquery
@@ -60,58 +56,59 @@ $(document).ready(function(){
     });
     // function to see what section user is on
     // still trying to figure out a better way. DRY code is so important to me.
-    $(document).on('scroll', () => {
-        if($(this).scrollTop() >= $('#home').position().top){
-            $('.portfolio').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').removeClass('active');
-            $('.home').addClass('active');
-        } 
-        if($(this).scrollTop() >= $('#about').position().top){
-            $('.home').removeClass('active');
-            $('.portfolio').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').addClass('active');
-        } 
-        if($(this).scrollTop() >= $('#portfolio').position().top){
-            $('.home').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').removeClass('active');
-            $('.portfolio').addClass('active');
-        }
-        if($(this).scrollTop() >= $('#contact').position().top){
-            $('.home').removeClass('active');
-            $('.about').removeClass('active');
-            $('.portfolio').removeClass('active');
-            $('.contact').addClass('active');
-        } 
-    });
-    $(document).on('load', () => {
-        if($(this).scrollTop() >= $('#home').position().top){
-            $('.portfolio').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').removeClass('active');
-            $('.home').addClass('active');
-        } 
-        if($(this).scrollTop() >= $('#about').position().top){
-            $('.home').removeClass('active');
-            $('.portfolio').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').addClass('active');
-        } 
-        if($(this).scrollTop() >= $('#portfolio').position().top){
-            $('.home').removeClass('active');
-            $('.contact').removeClass('active');
-            $('.about').removeClass('active');
-            $('.portfolio').addClass('active');
-        }
-        if($(this).scrollTop() >= $('#contact').position().top){
-            $('.home').removeClass('active');
-            $('.about').removeClass('active');
-            $('.portfolio').removeClass('active');
-            $('.contact').addClass('active');
-        } 
-    });
+    // FOUND BETTER SOLUTION -- check main.js 
+    // $(document).on('scroll', () => {
+    //     if($(this).scrollTop() >= $('#home').position().top){
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.home').addClass('active');
+    //     } 
+    //     if($(this).scrollTop() >= $('#about').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').addClass('active');
+    //     } 
+    //     if($(this).scrollTop() >= $('#portfolio').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.portfolio').addClass('active');
+    //     }
+    //     if($(this).scrollTop() >= $('#contact').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').addClass('active');
+    //     } 
+    // });
+    // $(document).on('load', () => {
+    //     if($(this).scrollTop() >= $('#home').position().top){
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.home').addClass('active');
+    //     } 
+    //     if($(this).scrollTop() >= $('#about').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').addClass('active');
+    //     } 
+    //     if($(this).scrollTop() >= $('#portfolio').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.contact').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.portfolio').addClass('active');
+    //     }
+    //     if($(this).scrollTop() >= $('#contact').position().top){
+    //         $('.home').removeClass('active');
+    //         $('.about').removeClass('active');
+    //         $('.portfolio').removeClass('active');
+    //         $('.contact').addClass('active');
+    //     } 
+    // });
 });
 </script>
 
@@ -141,7 +138,7 @@ $(document).ready(function(){
         <!-- arrow down begin part -->
         <div class="begin">
             <span class="arrow-text">See What I Do.</span>
-            <a href="#stick-here" class="arrow">
+            <a href="#stick-here" class="arrow smooth-scrolling">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
@@ -150,10 +147,10 @@ $(document).ready(function(){
     <main id="stick-here">
         <nav id="stickThis">
             <ul class="menu-flex">
-                <li class="menu-item home active">Home</li>
-                <li class="menu-item about">About</li>
-                <li class="menu-item portfolio">Portfolio</li>
-                <li class="menu-item contact">Contact</li>
+                <a class="smooth-scrolling" href="#home"><li class="menu-item home">Home</li></a>
+                <a class="smooth-scrolling" href="#about"><li class="menu-item about">About</li></a>
+                <a class="smooth-scrolling" href="#portfolio"><li class="menu-item portfolio">Portfolio</li></a>
+                <a class="smooth-scrolling" href="#contact"><li class="menu-item contact">Contact</li></a>
             </ul>
             <img src="images/usa.png" alt="usa flag" class="flags">
             <img src="images/spain.png" alt="usa flag" class="flags">

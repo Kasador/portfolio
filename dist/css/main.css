@@ -85,7 +85,6 @@ body {
   body nav {
     width: 100%;
     height: 100px;
-    color: #fff;
     background-color: #B63F55;
     display: flex;
     align-items: center; }
@@ -93,11 +92,18 @@ body {
       display: flex;
       justify-content: start;
       margin-left: 10rem; }
+      body nav .menu-flex a {
+        text-decoration: none;
+        color: #fff; }
+      body nav .menu-flex a:hover {
+        color: #333; }
       body nav .menu-flex .menu-item {
         font-size: 1.2rem;
         margin: 1.2rem;
         cursor: pointer;
         transition: all 0.3s; }
+      body nav .menu-flex .menu-item:hover {
+        color: #333; }
       body nav .menu-flex .active {
         color: #222;
         border-bottom: 5px solid #222;
