@@ -155,11 +155,6 @@ function updateBalls() {
     balls = new_balls.slice(0);
 }
 
-// loop alpha
-function loopAlphaInf() {
-
-}
-
 // Draw lines
 function renderLines() {
     var fraction, alpha;
@@ -247,14 +242,8 @@ function goMovie() {
     window.requestAnimationFrame(render);
 }
 goMovie();
-// END OF awesome abstract affect
-
-
-
-
-
-
-
-
+// END OF awesome abst ract affect
+     
+// My Javascript
 
 
