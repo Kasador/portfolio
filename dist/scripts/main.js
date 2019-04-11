@@ -246,4 +246,14 @@ goMovie();
      
 // My Javascript
 
+// arrow call to action variables
+let arrow = document.querySelector('.arrow'),
+    arrowText = document.querySelector('.arrow-text');
 
+// functions to change arrow's text color too!
+arrow.addEventListener('mouseover', () => {
+    arrowText.style.color = '#B63F55';
+});
+arrow.addEventListener('mouseout', () => {
+    arrowText.style.color = '#222';
+});

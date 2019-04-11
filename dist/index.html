@@ -31,13 +31,87 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
+      }, 1000, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+        window.location.hash = '';
       });
     } // End if
   });
+  // sticky menu using jquery
+  function sticktothetop() {
+    var window_top = $(window).scrollTop();
+    var top = $('#stick-here').offset().top;
+        if (window_top > top) {
+            $('#stickThis').addClass('stick');
+            $('.menu-item').addClass('menu-animate');
+            $('.menu-item').removeClass('menu-item');
+            $('#stick-here').height($('#stickThis').outerHeight());
+        } else {
+            $('#stickThis').removeClass('stick');
+            $('.menu-animate').addClass('menu-item');
+            $('.menu-animate').removeClass('menu-animate');
+            $('#stick-here').height(0);
+        }
+    }
+    $(function() {
+        $(window).scroll(sticktothetop);
+        sticktothetop();
+    });
+    // function to see what section user is on
+    // still trying to figure out a better way. DRY code is so important to me.
+    $(document).on('scroll', () => {
+        if($(this).scrollTop() >= $('#home').position().top){
+            $('.portfolio').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').removeClass('active');
+            $('.home').addClass('active');
+        } 
+        if($(this).scrollTop() >= $('#about').position().top){
+            $('.home').removeClass('active');
+            $('.portfolio').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').addClass('active');
+        } 
+        if($(this).scrollTop() >= $('#portfolio').position().top){
+            $('.home').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').removeClass('active');
+            $('.portfolio').addClass('active');
+        }
+        if($(this).scrollTop() >= $('#contact').position().top){
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.portfolio').removeClass('active');
+            $('.contact').addClass('active');
+        } 
+    });
+    $(document).on('load', () => {
+        if($(this).scrollTop() >= $('#home').position().top){
+            $('.portfolio').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').removeClass('active');
+            $('.home').addClass('active');
+        } 
+        if($(this).scrollTop() >= $('#about').position().top){
+            $('.home').removeClass('active');
+            $('.portfolio').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').addClass('active');
+        } 
+        if($(this).scrollTop() >= $('#portfolio').position().top){
+            $('.home').removeClass('active');
+            $('.contact').removeClass('active');
+            $('.about').removeClass('active');
+            $('.portfolio').addClass('active');
+        }
+        if($(this).scrollTop() >= $('#contact').position().top){
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.portfolio').removeClass('active');
+            $('.contact').addClass('active');
+        } 
+    });
 });
 </script>
 
@@ -47,7 +121,7 @@ $(document).ready(function(){
     <canvas id="nokey" width="800" height="800">
         Your Browser Don't Support Canvas, Please Download Chrome ^_^``
     </canvas>
-    <header>
+    <header id="home">
         <!-- header -->
         <div class="header-flex">
             <!-- image of me -->
@@ -55,7 +129,7 @@ $(document).ready(function(){
             <!-- header text -->
             <div class="header-text">
                 <h1 class="header-title">Hi, I'm <span class="header-name">Hunter</span>.</h1>
-                <h2 class="header-sub-title">I'm a <span class="header-web">Web Developer</span>.</h2>
+                <h2 class="header-sub-title">I'm a <span class="header-web">web developer</span>.</h2>
             </div>
             <!-- social medias -->
             <div class="social-medias">
@@ -66,14 +140,33 @@ $(document).ready(function(){
         </div>
         <!-- arrow down begin part -->
         <div class="begin">
-            <span>See What I Do.</span>
-            <a href="#main-content" class="arrow">
+            <span class="arrow-text">See What I Do.</span>
+            <a href="#stick-here" class="arrow">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
     </header>
-    <main id="main-content">
-        <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing!</p>
+    <!-- main content after landing page -->
+    <main id="stick-here">
+        <nav id="stickThis">
+            <ul class="menu-flex">
+                <li class="menu-item home active">Home</li>
+                <li class="menu-item about">About</li>
+                <li class="menu-item portfolio">Portfolio</li>
+                <li class="menu-item contact">Contact</li>
+            </ul>
+            <img src="images/usa.png" alt="usa flag" class="flags">
+            <img src="images/spain.png" alt="usa flag" class="flags">
+        </nav>
+        <seciton id="about">
+            <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing!</p>
+        </seciton>
+        <seciton id="portfolio">
+            <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing!</p>
+        </seciton>
+        <seciton id="contact">
+            <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing!</p>
+        </seciton>
     </main>
     <script src="scripts/main.js"></script>
 </body>
