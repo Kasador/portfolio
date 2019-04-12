@@ -186,18 +186,28 @@ body {
         }
     }
     // stick nav & animatation
-    #stickThis.stick {
+    #stickThis {
         margin-top: 0;
         position: fixed;
         top: 0;
         z-index: 9999;
-    }
-    .menu-animate {
-        font-size: 1.5rem;
-        margin: 1.5rem;
-        cursor: pointer;
+        display: none;
         transition: all 0.3s;
     }
+    .section-header {
+        font-size: 4rem;
+        text-align: center;
+        transition: all 0.3s;
+        padding-top: 120px;
+    
+        hr {
+            width: 20%;
+            border-width: 3.5px;
+            border-color: $primary-color;
+            border-radius: 10px;
+        }
+    }
 }
+
 
 // conncet macbook to github
