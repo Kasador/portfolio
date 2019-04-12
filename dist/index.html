@@ -48,61 +48,6 @@ $(document).ready(function(){
         $(window).scroll(sticktothetop);
         sticktothetop();
     });
-    // function to see what section user is on
-    // still trying to figure out a better way. DRY code is so important to me.
-    // FOUND BETTER SOLUTION -- check main.js 
-    // $(document).on('scroll', () => {
-    //     if($(this).scrollTop() >= $('#home').position().top){
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.home').addClass('active');
-    //     } 
-    //     if($(this).scrollTop() >= $('#about').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').addClass('active');
-    //     } 
-    //     if($(this).scrollTop() >= $('#portfolio').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.portfolio').addClass('active');
-    //     }
-    //     if($(this).scrollTop() >= $('#contact').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').addClass('active');
-    //     } 
-    // });
-    // $(document).on('load', () => {
-    //     if($(this).scrollTop() >= $('#home').position().top){
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.home').addClass('active');
-    //     } 
-    //     if($(this).scrollTop() >= $('#about').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').addClass('active');
-    //     } 
-    //     if($(this).scrollTop() >= $('#portfolio').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.contact').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.portfolio').addClass('active');
-    //     }
-    //     if($(this).scrollTop() >= $('#contact').position().top){
-    //         $('.home').removeClass('active');
-    //         $('.about').removeClass('active');
-    //         $('.portfolio').removeClass('active');
-    //         $('.contact').addClass('active');
-    //     } 
-    // });
 });
 </script>
 
@@ -132,7 +77,7 @@ $(document).ready(function(){
         <!-- arrow down begin part -->
         <div class="begin">
             <span class="arrow-text">See What I Do.</span>
-            <a href="#stick-here" class="arrow smooth-scrolling">
+            <a href="#about" class="arrow smooth-scrolling">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
@@ -174,8 +119,23 @@ $(document).ready(function(){
                 <h1>About</h1>
                 <hr>
             </div>
-            <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! </p>
-            <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! </p>
+            <div class="icons-flex">
+                <div class="icons">
+                    <span><i class="fas fa-mobile-alt"></i></span>
+                    <h1>Responsive</h1>
+                    <p>With around 80% of Americans now carrying pocket-sized computers everywhere they go; the majority of website visitors will actually never see your desktop version; this is important because, as web developers, everything we make & produce should be mobile friendly.</p>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-lightbulb"></i></span>
+                    <h1>Intuitive</h1>
+                    <p>With a strong preference for easy to use UX/UI; I believe, as developers, we should always be designing & developing for the end-user. This means making things easier & less complicated for the user; not harder. Otherwise, what's the point?</p>
+                </div>
+                <div class="icons">
+                    <span id="fix-rocket"><i class="fas fa-rocket"></i></span>
+                    <h1>Dynamic</h1>
+                    <p>We've passed Web 1.0 & onward into Web 2.0. So, why make a website static and "boring". Making dynamic websites is essential in the professional world we live in today. I love making pages come to life while keeping the concept of simplicity in mind.</p>
+                </div>
+            </div>
         </seciton>
         <seciton id="portfolio">
             <div class="section-header">

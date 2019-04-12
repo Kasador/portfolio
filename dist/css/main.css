@@ -21,115 +21,151 @@
 body {
   width: 100%;
   font-family: 'Nunito', sans-serif; }
-  body canvas {
-    background-color: #fff;
-    z-index: -1;
-    position: fixed; }
-  body header {
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
+
+canvas {
+  background-color: #fff;
+  z-index: -1;
+  position: fixed; }
+
+header {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  header .header-flex {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
-    body header .header-flex {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      body header .header-flex .image-hunter {
-        border: 10px solid #222;
-        width: 250px;
-        height: 250px;
-        border-radius: 100%;
-        margin: 30px; }
-      body header .header-flex .header-text {
-        text-align: center;
-        color: #222; }
-        body header .header-flex .header-text .header-title {
-          font-size: 4rem;
-          padding: 10px; }
-          body header .header-flex .header-text .header-title .header-name {
-            color: #B63F55; }
-        body header .header-flex .header-text .header-sub-title {
-          font-size: 5rem;
-          padding: 10px; }
-          body header .header-flex .header-text .header-sub-title .header-web {
-            color: #B63F55; }
-      body header .header-flex .social-medias {
-        font-size: 5rem;
-        color: #222; }
-        body header .header-flex .social-medias .fab {
-          cursor: pointer;
-          transition: all 0.3s; }
-        body header .header-flex .social-medias .fab:hover {
-          color: #B63F55; }
-    body header .begin {
-      color: #222;
-      width: 100%;
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
-      body header .begin .arrow-text {
-        font-size: 2rem;
-        transition: all 0.3s; }
-      body header .begin .arrow {
-        color: #222;
-        transition: all 0.3s; }
-        body header .begin .arrow .fas {
-          font-size: 4rem;
-          cursor: pointer; }
-      body header .begin .arrow:hover {
-        color: #B63F55; }
-  body nav {
-    width: 100%;
-    height: 100px;
-    background-color: #B63F55;
-    display: flex;
     align-items: center; }
-    body nav .menu-flex {
-      display: flex;
-      justify-content: start;
-      margin-left: 10rem; }
-      body nav .menu-flex a {
-        text-decoration: none;
-        color: #fff; }
-      body nav .menu-flex a:hover {
-        color: #333; }
-      body nav .menu-flex .menu-item {
-        font-size: 1.2rem;
-        margin: 1.2rem;
+    header .header-flex .image-hunter {
+      border: 10px solid #222;
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      margin: 30px; }
+    header .header-flex .header-text {
+      text-align: center;
+      color: #222; }
+      header .header-flex .header-text .header-title {
+        font-size: 4rem;
+        padding: 10px; }
+        header .header-flex .header-text .header-title .header-name {
+          color: #B63F55; }
+      header .header-flex .header-text .header-sub-title {
+        font-size: 5rem;
+        padding: 10px; }
+        header .header-flex .header-text .header-sub-title .header-web {
+          color: #B63F55; }
+    header .header-flex .social-medias {
+      font-size: 5rem;
+      color: #222; }
+      header .header-flex .social-medias .fab {
         cursor: pointer;
         transition: all 0.3s; }
-      body nav .menu-flex .menu-item:hover {
-        color: #333; }
-      body nav .menu-flex .active {
-        color: #222;
-        border-bottom: 5px solid #222;
-        transition: all 0.3s; }
-    body nav .flags {
-      width: 60px;
-      height: 40px;
-      cursor: pointer;
-      border: 3px solid #fff;
-      border-radius: 10px;
-      margin: 5px;
-      margin-left: 20px; }
-  body #stickThis {
-    margin-top: 0;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    display: none;
+      header .header-flex .social-medias .fab:hover {
+        color: #B63F55; }
+
+.begin {
+  color: #222;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .begin .arrow-text {
+    font-size: 2rem;
     transition: all 0.3s; }
-  body .section-header {
-    font-size: 4rem;
-    text-align: center;
-    transition: all 0.3s;
-    padding-top: 120px; }
-    body .section-header hr {
-      width: 20%;
-      border-width: 3.5px;
-      border-color: #222;
-      border-radius: 10px; }
+  .begin .arrow {
+    color: #222;
+    transition: all 0.3s; }
+    .begin .arrow .fas {
+      font-size: 4rem;
+      cursor: pointer; }
+  .begin .arrow:hover {
+    color: #B63F55; }
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #B63F55;
+  display: flex;
+  align-items: center; }
+  nav .menu-flex {
+    display: flex;
+    justify-content: start;
+    margin-left: 10rem; }
+    nav .menu-flex a {
+      text-decoration: none;
+      color: #fff; }
+    nav .menu-flex a:hover {
+      color: #333; }
+    nav .menu-flex .menu-item {
+      font-size: 1.2rem;
+      margin: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s; }
+    nav .menu-flex .menu-item:hover {
+      color: #333; }
+    nav .menu-flex .active {
+      color: #222;
+      border-bottom: 5px solid #222;
+      transition: all 0.3s; }
+  nav .flags {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 20px; }
+
+#stickThis {
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  display: none;
+  transition: all 0.3s; }
+
+.section-header {
+  font-size: 4rem;
+  text-align: center;
+  transition: all 0.3s;
+  padding-top: 120px;
+  text-transform: uppercase; }
+  .section-header hr {
+    width: 300px;
+    border-width: 3.5px;
+    border-color: #222;
+    border-radius: 10px; }
+
+.icons-flex {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto; }
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px; }
+  .icons #fix-rocket {
+    padding: 30px 35px; }
+  .icons span {
+    font-size: 3rem;
+    padding: 30px 40px;
+    background-color: #222;
+    border-radius: 100%;
+    color: #fff;
+    border: 5px solid #B63F55; }
+  .icons h1 {
+    font-size: 2.5rem;
+    padding: 20px; }
+  .icons p {
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    color: #333; }
