@@ -70,7 +70,7 @@ header {
             .header-title {
                 font-size: 4rem;
                 padding: 10px;
-
+                
                 // name 
                 .header-name {
                     color: $accent-color;
@@ -91,6 +91,7 @@ header {
         .social-medias {
             font-size: 5rem;
             color: $primary-color;
+            transition: all 0.3s;
 
             // social icons
             .fab {
@@ -209,6 +210,14 @@ nav {
     flex-direction: row;
     width: 90%;
     margin: 0 auto;
+    
+    @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+        width: 70%;
+    }
+    @media screen and (max-width: 600px) {
+        width: 90%;
+    }
 }
 .icons {
     display: flex;
@@ -231,10 +240,18 @@ nav {
     h1 {
         font-size: 2.5rem;
         padding: 20px;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 2.0rem;
+        }
     }
     p {
         font-size: 1.5rem;
         padding: 10px 25px;
         color: #333;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 1.0rem;
+        }
     }
 }

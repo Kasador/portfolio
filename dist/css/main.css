@@ -59,7 +59,8 @@ header {
           color: #B63F55; }
     header .header-flex .social-medias {
       font-size: 5rem;
-      color: #222; }
+      color: #222;
+      transition: all 0.3s; }
       header .header-flex .social-medias .fab {
         cursor: pointer;
         transition: all 0.3s; }
@@ -146,6 +147,13 @@ nav {
   flex-direction: row;
   width: 90%;
   margin: 0 auto; }
+  @media screen and (max-width: 900px) {
+    .icons-flex {
+      flex-wrap: wrap;
+      width: 70%; } }
+  @media screen and (max-width: 600px) {
+    .icons-flex {
+      width: 90%; } }
 
 .icons {
   display: flex;
@@ -165,7 +173,13 @@ nav {
   .icons h1 {
     font-size: 2.5rem;
     padding: 20px; }
+    @media screen and (max-width: 1200px) {
+      .icons h1 {
+        font-size: 2.0rem; } }
   .icons p {
     font-size: 1.5rem;
     padding: 10px 25px;
     color: #333; }
+    @media screen and (max-width: 1200px) {
+      .icons p {
+        font-size: 1.0rem; } }
