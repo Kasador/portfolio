@@ -44,22 +44,13 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 15rem; 
 
     // flex header
     .header-flex {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        // Hunter Shaw -- Image
-        .image-hunter {
-            border: 10px solid $primary-color;
-            width: 250px;
-            height: 250px;
-            border-radius: 100%;
-            // padding: 5px;
-            margin: 30px;
-        }
 
         // header text
         .header-text {
@@ -254,4 +245,89 @@ nav {
             font-size: 1.0rem;
         }
     }
+}
+.about-intro {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+
+    img {
+        border: 10px solid $primary-color;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        // padding: 5px;
+        margin: 10px;
+    }
+    p {
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+        text-indent: 2rem;
+
+        span {
+            color: $accent-color;
+        }
+    }
+}
+.about-skills {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.skills-text{
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    align-items: center;
+    justify-content: flex-end;
+    border-right: 2px solid lightgray;
+
+    h1 {
+        font-size: 1.3rem;
+        padding: 5px;
+        margin-right: 5px;
+    }
+    i {
+        font-size: 2.5rem;
+        padding: 5px;
+        color: $accent-color;
+        margin-right: 10px;
+    }
+    img {
+        width: 50px;
+        margin-right: 10px;
+    }
+}
+.progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+.my-progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-left: 15px;
+    padding: 5px;
+}
+.bar {
+    height: 30px;
+    background-color: $accent-color;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: $secondary-color;
+    border-radius: 10px;
+}
+#html, #css, #sass, #js, #jquery, #react, #node, #php, #sql, #wordpress {
+    width: 10%;
 }

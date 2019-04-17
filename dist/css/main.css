@@ -33,17 +33,12 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-top: 15rem; }
   header .header-flex {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    header .header-flex .image-hunter {
-      border: 10px solid #222;
-      width: 250px;
-      height: 250px;
-      border-radius: 100%;
-      margin: 30px; }
     header .header-flex .header-text {
       text-align: center;
       color: #222; }
@@ -183,3 +178,80 @@ nav {
     @media screen and (max-width: 1200px) {
       .icons p {
         font-size: 1.0rem; } }
+
+.about-intro {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 30px; }
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%; }
+  .about-me img {
+    border: 10px solid #222;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin: 10px; }
+  .about-me p {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    text-indent: 2rem; }
+    .about-me p span {
+      color: #B63F55; }
+
+.about-skills {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+.skills-text {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 2px solid lightgray; }
+  .skills-text h1 {
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-right: 5px; }
+  .skills-text i {
+    font-size: 2.5rem;
+    padding: 5px;
+    color: #B63F55;
+    margin-right: 10px; }
+  .skills-text img {
+    width: 50px;
+    margin-right: 10px; }
+
+.progress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px; }
+
+.my-progress {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-left: 15px;
+  padding: 5px; }
+
+.bar {
+  height: 30px;
+  background-color: #B63F55;
+  text-align: center;
+  /* To center it horizontally (if you want) */
+  line-height: 30px;
+  /* To center it vertically */
+  color: #fff;
+  border-radius: 10px; }
+
+#html, #css, #sass, #js, #jquery, #react, #node, #php, #sql, #wordpress {
+  width: 10%; }

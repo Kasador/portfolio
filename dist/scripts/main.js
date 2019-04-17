@@ -285,3 +285,29 @@ $(document).on('scroll', () => {
         $('.home').addClass('active');
     } 
 });
+// animation of progress bars
+function move() {
+    var barHtml = document.getElementById('html');
+    var barCss = document.getElementById('css');
+    var width = 10;
+    var setHtml = setInterval(html, 20);
+    var setCss = setInterval(css, 20);
+    function html() {
+      if (width >= 90) {
+        clearInterval(setHtml);
+      } else {
+        width++; 
+        barHtml.style.width = width + '%'; 
+        barHtml.innerHTML = width * 1 + '%';
+      }
+    }
+    function css() {
+        if (width >= 80) {
+          clearInterval(setCss);
+        } else {
+          width++; 
+          barCss.style.width = width + '%'; 
+          barCss.innerHTML = width * 1 + '%';
+        }
+      }
+  }
