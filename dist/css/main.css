@@ -251,7 +251,5 @@ nav {
   line-height: 30px;
   /* To center it vertically */
   color: #fff;
-  border-radius: 10px; }
-
-#html, #css, #sass, #js, #jquery, #react, #node, #php, #sql, #wordpress {
+  border-radius: 10px;
   width: 10%; }

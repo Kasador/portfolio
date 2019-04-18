@@ -257,7 +257,6 @@ arrow.addEventListener('mouseover', () => {
 arrow.addEventListener('mouseout', () => {
     arrowText.style.color = '#222';
 });
-
 // function to remove all active
 function removeActiveAll() {
     $('.portfolio').removeClass('active');
@@ -265,10 +264,8 @@ function removeActiveAll() {
     $('.about').removeClass('active');
     $('.home').removeClass('active');
 }
-
 // function to check condition
 const checkCondition = (id) => $(this).scrollTop() >= $('#'+id).position().top;
-
 // on scroll, check condition, add active based on condition bool value
 $(document).on('scroll', () => {
     removeActiveAll();
@@ -286,28 +283,21 @@ $(document).on('scroll', () => {
     } 
 });
 // animation of progress bars
+let progressBars = document.querySelectorAll('.bar');
+// went from 200 lines of code to this! (DRY code)
 function move() {
-    var barHtml = document.getElementById('html');
-    var barCss = document.getElementById('css');
-    var width = 10;
-    var setHtml = setInterval(html, 20);
-    var setCss = setInterval(css, 20);
-    function html() {
-      if (width >= 90) {
-        clearInterval(setHtml);
-      } else {
-        width++; 
-        barHtml.style.width = width + '%'; 
-        barHtml.innerHTML = width * 1 + '%';
-      }
-    }
-    function css() {
-        if (width >= 80) {
-          clearInterval(setCss);
-        } else {
-          width++; 
-          barCss.style.width = width + '%'; 
-          barCss.innerHTML = width * 1 + '%';
+    for (let i=0; i < progressBars.length; i++) {
+        let bar = progressBars[i];
+        let width = 10;
+        let moveBar = setInterval(checkBar, 20);
+        function checkBar() {
+            if (width >= bar.getAttribute('data-percent')) {
+                clearInterval(moveBar);
+            } else {
+                width++; 
+                bar.style.width = width + '%'; 
+                bar.innerHTML = width * 1 + '%';
+            }
         }
-      }
-  }
+    }
+}
