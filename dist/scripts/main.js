@@ -301,3 +301,11 @@ function move() {
         }
     }
 }
+// typing effect
+var options = {
+  stringsElement: '#typed-sub', 
+  typeSpeed: 50,
+  smartBackspace: true
+}
+var typed = new Typed(".header-sub-title", options);
+  

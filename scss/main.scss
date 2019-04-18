@@ -63,18 +63,12 @@ header {
                 padding: 10px;
                 
                 // name 
-                .header-name {
+                .header-color {
                     color: $accent-color;
                 }
             }
             .header-sub-title {
                 font-size: 5rem;
-                padding: 10px;
-
-                // web developer
-                .header-web {
-                    color: $accent-color;
-                }
             }
         }
 
@@ -94,6 +88,16 @@ header {
             }
         }
     }
+}
+.color {
+    color: $accent-color;
+}
+.typed-cursor {
+    font-size: 4rem;
+}
+.header-title-flex {
+    display: flex;
+    flex-direction: row;
 }
 // begin section
 .begin {

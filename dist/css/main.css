@@ -45,13 +45,10 @@ header {
       header .header-flex .header-text .header-title {
         font-size: 4rem;
         padding: 10px; }
-        header .header-flex .header-text .header-title .header-name {
+        header .header-flex .header-text .header-title .header-color {
           color: #B63F55; }
       header .header-flex .header-text .header-sub-title {
-        font-size: 5rem;
-        padding: 10px; }
-        header .header-flex .header-text .header-sub-title .header-web {
-          color: #B63F55; }
+        font-size: 5rem; }
     header .header-flex .social-medias {
       font-size: 5rem;
       color: #222;
@@ -61,6 +58,16 @@ header {
         transition: all 0.3s; }
       header .header-flex .social-medias .fab:hover {
         color: #B63F55; }
+
+.color {
+  color: #B63F55; }
+
+.typed-cursor {
+  font-size: 4rem; }
+
+.header-title-flex {
+  display: flex;
+  flex-direction: row; }
 
 .begin {
   color: #222;
