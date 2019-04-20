@@ -242,10 +242,14 @@ function goMovie() {
     window.requestAnimationFrame(render);
 }
 goMovie();
-// END OF awesome abst ract affect
-     
-// My Javascript
+// END OF awesome affect
 
+// My Javascript
+// menu js
+$('.menu-container').on('click', () => {
+    $(".menu-container").toggleClass('is-menu-open');
+});
+  
 // arrow call to action variables
 let arrow = document.querySelector('.arrow'),
     arrowText = document.querySelector('.arrow-text');

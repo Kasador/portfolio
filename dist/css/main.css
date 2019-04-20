@@ -149,7 +149,7 @@ nav {
   flex-direction: row;
   width: 90%;
   margin: 0 auto; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1200px) {
     .icons-flex {
       flex-wrap: wrap;
       width: 70%; } }
@@ -175,47 +175,66 @@ nav {
   .icons h1 {
     font-size: 2.5rem;
     padding: 20px; }
-    @media screen and (max-width: 1200px) {
-      .icons h1 {
-        font-size: 2.0rem; } }
   .icons p {
     font-size: 1.5rem;
     padding: 10px 25px;
     color: #333; }
-    @media screen and (max-width: 1200px) {
-      .icons p {
-        font-size: 1.0rem; } }
 
 .about-intro {
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
   margin-top: 30px; }
+  @media screen and (max-width: 1400px) {
+    .about-intro {
+      flex-direction: column; } }
 
 .about-me {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  align-content: center;
+  box-align: center;
+  box-pack: center;
   width: 35%; }
-  .about-me img {
-    border: 10px solid #222;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    margin: 10px; }
-  .about-me p {
-    font-size: 1.3rem;
-    padding: 1rem 2rem;
-    text-indent: 2rem; }
-    .about-me p span {
-      color: #B63F55; }
+  @media screen and (max-width: 1400px) {
+    .about-me {
+      width: 80%;
+      margin-bottom: 20px; } }
+  .about-me div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    box-align: center;
+    box-pack: center; }
+    .about-me div img {
+      border: 10px solid #222;
+      width: 250px;
+      height: 250px;
+      border-radius: 100%;
+      margin: 10px; }
+    .about-me div p {
+      font-size: 1.5rem;
+      padding: 1rem;
+      text-indent: 2rem; }
+      @media screen and (max-width: 1400px) {
+        .about-me div p {
+          width: 80%; } }
+      .about-me div p span {
+        color: #B63F55; }
 
 .about-skills {
   width: 45%;
   display: flex;
   flex-direction: column;
   align-content: center; }
+  @media screen and (max-width: 1400px) {
+    .about-skills {
+      width: 80%; } }
 
 .skills-text {
   display: flex;
@@ -260,3 +279,51 @@ nav {
   color: #fff;
   border-radius: 10px;
   width: 10%; }
+
+.menu-container {
+  cursor: pointer; }
+  .menu-container .bars {
+    width: 60px;
+    height: 20px;
+    position: absolute;
+    top: 45px;
+    left: 90%;
+    transition: transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1); }
+    .menu-container .bars span {
+      display: block;
+      width: 100%;
+      height: 10px;
+      background-color: #222;
+      margin-top: 10px; }
+      .menu-container .bars span:first-child {
+        margin-top: 0;
+        transform: scaleX(1);
+        transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+        transition-delay: 0.4s; }
+      .menu-container .bars span:nth-child(3) {
+        width: 65%;
+        transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+        transition-delay: 0.4s; }
+    .menu-container .bars .other-bar {
+      width: 10px;
+      height: 0;
+      background-color: #222;
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      margin-left: -5px;
+      transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+      z-index: 10; }
+  .menu-container.is-menu-open .bars {
+    transform: rotate(45deg);
+    transition-delay: 0.4s; }
+    .menu-container.is-menu-open .bars span:first-child {
+      transform: scaleX(0);
+      transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1); }
+    .menu-container.is-menu-open .bars span:nth-child(3) {
+      width: 0;
+      transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1); }
+    .menu-container.is-menu-open .bars .other-bar {
+      height: 63px;
+      transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+      transition-delay: 0.3s; }
