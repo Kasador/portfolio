@@ -40,6 +40,7 @@ $(document).ready(function(){
     var top = $('#stick-here').offset().top;
         if (window_top > top) {
             $('#stickThis').slideDown('fast');
+            $('.bars').fadeIn('slow');
         } else {
             $('#stickThis').css('display', 'none');
         }
@@ -88,15 +89,6 @@ $(document).ready(function(){
             </a>
         </div>
     </header>
-    <!-- menu button html from https://codepen.io/anon/pen/wZjbMG -->
-    <div class="menu-container">
-        <div class="bars">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="other-bar"></div>
-        </div>
-    </div>
     <!-- main content after landing page -->
     <main id="stick-here">
         <!-- normal menu -->
@@ -112,6 +104,15 @@ $(document).ready(function(){
         </nav>
         <!-- menu sticky -->
         <nav id="stickThis">
+            <!-- menu button html from https://codepen.io/anon/pen/wZjbMG -->
+            <div class="menu-container">
+                <div class="bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="other-bar"></div>
+                </div>
+            </div>
             <ul class="menu-flex">
                 <a class="smooth-scrolling" href="#home">
                     <li class="menu-item home">Home</li>

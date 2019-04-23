@@ -141,6 +141,11 @@ nav {
         display: flex;
         justify-content: start;
         margin-left: 10rem;
+        transition: all 0.3s;
+
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
 
         a {
             text-decoration: none;
@@ -357,19 +362,26 @@ nav {
     width: 10%;
 }
 // menu button SASS from https://codepen.io/anon/pen/wZjbMG
-$menu-color: #222;
+$menu-color: $secondary-color;
 $snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
 
 .menu-container {
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width:900px) {
+        display: block;
+        transition: all 0.3s;
+    }
   .bars {
     width: 60px;
     height: 20px;
     position: absolute;
-    top: 45px;
-    left: 90%;
+    top: 20px;
+    left: 80%;
     transition: transform 0.3s $snappy;
     // border: 1px solid white;
+
     span {
       display: block;
       width: 100%;
