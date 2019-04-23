@@ -377,6 +377,7 @@ $snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
     width: 60px;
     height: 20px;
     position: absolute;
+    z-index: 12;
     top: 20px;
     left: 80%;
     transition: transform 0.3s $snappy;
@@ -434,4 +435,33 @@ $snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
     }
   }
 }
-// end of menu button
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 100px;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    background-color: $primary-color;
+    overflow: hidden;
+    border: 10px solid $accent-color;
+    text-align: center;
+}
+.mobile-menu-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-menu-item {
+    margin: 5px;
+    margin-top: 50px;
+    font-size: 3rem;
+}
+.a-mobile {
+    text-decoration: none;
+    transition: all 0.3s;
+    color: $secondary-color;
+}
+.a-mobile:hover {
+    color: $accent-color;
+}

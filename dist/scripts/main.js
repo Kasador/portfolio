@@ -312,4 +312,14 @@ var options = {
   smartBackspace: true
 }
 var typed = new Typed(".header-sub-title", options);
-  
+
+// open menu
+$('.menu-container').on('click', () => {
+    $('.mobile-menu').slideToggle();
+
+    if ($(this).hasClass('is-menu-open')) {
+        $("body").css("overflow", "hidden");
+    } else {
+        $("body").css("overflow", "auto");
+    }
+});
