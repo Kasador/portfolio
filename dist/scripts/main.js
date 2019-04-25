@@ -323,6 +323,13 @@ let mobileHome = $('.mobile-home'),
     mobileAbout = $('.mobile-about'),
     mobilePortfolio = $('.mobile-portfolio');
     mobileContact = $('.mobile-contact');
-mobileHome.on('click', () => {
+
+let mobileMenuItems = $('.mobile-menu-item');
+
+mobileMenuItems.on('click', () => {
     $('.mobile-menu').slideToggle();
+
+    if ($('.menu-container').hasClass('is-menu-open')) {
+        $('.menu-container').removeClass('is-menu-open');
+    }
 });

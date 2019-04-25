@@ -368,11 +368,7 @@ $snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
 .menu-container {
     display: none;
     cursor: pointer;
-
-    @media screen and (max-width:900px) {
-        display: block;
-        transition: all 0.3s;
-    }
+    
   .bars {
     width: 60px;
     height: 20px;

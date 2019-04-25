@@ -41,8 +41,24 @@ $(document).ready(function(){
         if (window_top > top) {
             $('#stickThis').slideDown('fast');
             $('.bars').fadeIn('slow');
+
+            // on load
+            if ($(window).width() < 900) {
+                $('.menu-container').fadeIn(500);
+            } else {
+                $('.menu-container').css('display', 'none');
+            }
+            // on window resize
+            $( window ).resize( () => {
+                if ($(window).width() < 900) {
+                    $('.menu-container').fadeIn(500);
+                } else {
+                    $('.menu-container').css('display', 'none');
+                }
+            });
         } else {
             $('#stickThis').css('display', 'none');
+            $('.menu-container').css('display', 'none');
         }
     }
     $(function() {
