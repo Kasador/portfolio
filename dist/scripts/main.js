@@ -316,10 +316,13 @@ var typed = new Typed(".header-sub-title", options);
 // open menu
 $('.menu-container').on('click', () => {
     $('.mobile-menu').slideToggle();
+});
 
-    if ($(this).hasClass('is-menu-open')) {
-        $("body").css("overflow", "hidden");
-    } else {
-        $("body").css("overflow", "auto");
-    }
+// click items mobile menu
+let mobileHome = $('.mobile-home'),
+    mobileAbout = $('.mobile-about'),
+    mobilePortfolio = $('.mobile-portfolio');
+    mobileContact = $('.mobile-contact');
+mobileHome.on('click', () => {
+    $('.mobile-menu').slideToggle();
 });
