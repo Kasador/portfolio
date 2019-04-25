@@ -245,6 +245,50 @@ goMovie();
 // END OF awesome affect
 
 // My Javascript
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $(".smooth-scrolling").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top + 1
+            }, 1000);
+        } // End if
+    });
+    // sticky menu using jquery
+    function sticktothetop() {
+    var window_top = $(window).scrollTop();
+    var top = $('#stick-here').offset().top;
+        if (window_top > top) {
+            $('#stickThis').slideDown('fast');
+            $('.bars').fadeIn('slow');
+
+            // on load
+            if ($(window).width() +20 <= 900) {
+                $('.menu-container').fadeIn(500);
+            } else {
+                $('.menu-container').css('display', 'none');
+            }
+            // on window resize
+            $( window ).resize( () => {
+                if ($(window).width() + 20 <= 900) {
+                    $('.menu-container').fadeIn(500);
+                } else {
+                    $('.menu-container').css('display', 'none');
+                }
+            });
+        } else {
+            $('#stickThis').css('display', 'none');
+            $('.menu-container').css('display', 'none');
+        }
+    }
+    $(function() {
+        $(window).scroll(sticktothetop);
+        sticktothetop();
+    });
+});
 // menu js
 $('.menu-container').on('click', () => {
     $(".menu-container").toggleClass('is-menu-open');

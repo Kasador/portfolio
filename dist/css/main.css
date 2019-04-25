@@ -33,26 +33,42 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 15rem; }
+  justify-content: center;
+  align-items: center; }
   header .header-flex {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-top: auto; }
     header .header-flex .header-text {
       text-align: center;
       color: #222; }
       header .header-flex .header-text .header-title {
         font-size: 4rem;
         padding: 10px; }
+        @media screen and (max-width: 900px) {
+          header .header-flex .header-text .header-title {
+            font-size: 3rem; } }
         header .header-flex .header-text .header-title .header-color {
           color: #B63F55; }
       header .header-flex .header-text .header-sub-title {
         font-size: 5rem; }
+        @media screen and (max-width: 900px) {
+          header .header-flex .header-text .header-sub-title {
+            font-size: 4rem; } }
+        @media screen and (max-width: 730px) {
+          header .header-flex .header-text .header-sub-title {
+            font-size: 3rem; } }
+        @media screen and (max-width: 540px) {
+          header .header-flex .header-text .header-sub-title {
+            font-size: 2.2rem; } }
     header .header-flex .social-medias {
       font-size: 5rem;
       color: #222;
       transition: all 0.3s; }
+      @media screen and (max-width: 540px) {
+        header .header-flex .social-medias {
+          font-size: 4rem; } }
       header .header-flex .social-medias .fab {
         cursor: pointer;
         transition: all 0.3s; }
@@ -64,6 +80,15 @@ header {
 
 .typed-cursor {
   font-size: 4rem; }
+  @media screen and (max-width: 900px) {
+    .typed-cursor {
+      font-size: 3.5rem; } }
+  @media screen and (max-width: 730px) {
+    .typed-cursor {
+      font-size: 3rem; } }
+  @media screen and (max-width: 540px) {
+    .typed-cursor {
+      font-size: 2.5rem; } }
 
 .header-title-flex {
   display: flex;
@@ -73,10 +98,12 @@ header {
   color: #222;
   width: 100%;
   height: 150px;
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  align-self: flex-end; }
   .begin .arrow-text {
     font-size: 2rem;
     transition: all 0.3s; }
