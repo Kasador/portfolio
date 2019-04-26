@@ -121,7 +121,8 @@ nav {
   height: 100px;
   background-color: #B63F55;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 5px solid #222; }
   nav .menu-flex {
     display: flex;
     justify-content: start;
@@ -167,8 +168,11 @@ nav {
   font-size: 4rem;
   text-align: center;
   transition: all 0.3s;
-  padding-top: 120px;
+  padding-top: 150px;
   text-transform: uppercase; }
+  @media screen and (max-width: 600px) {
+    .section-header {
+      font-size: 3rem; } }
   .section-header hr {
     width: 300px;
     border-width: 3.5px;
@@ -371,6 +375,7 @@ nav {
   background-color: #222;
   overflow: hidden;
   border: 10px solid #B63F55;
+  border-top: 10px solid #222;
   text-align: center; }
 
 .mobile-menu-flex {
@@ -390,3 +395,43 @@ nav {
 
 .a-mobile:hover {
   color: #B63F55; }
+
+.contact-footer {
+  width: 100%;
+  transform: translateY(3px); }
+
+.contact-section {
+  background: #B63F55;
+  color: #fff; }
+
+footer {
+  background: #222;
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.social-medias-footer {
+  font-size: 3rem;
+  margin: 10px;
+  cursor: pointer; }
+  .social-medias-footer i {
+    transition: all 0.3s; }
+  .social-medias-footer i:hover {
+    color: #B63F55; }
+
+.back-to-top-box {
+  position: absolute;
+  margin-top: -100px;
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 10px; }
+
+.up-arrow {
+  font-size: 5rem;
+  color: #222;
+  cursor: pointer; }

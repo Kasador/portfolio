@@ -377,3 +377,6 @@ mobileMenuItems.on('click', () => {
         $('.menu-container').removeClass('is-menu-open');
     }
 });
+
+// get current year for footer
+document.getElementById("year").innerHTML = new Date().getFullYear();
