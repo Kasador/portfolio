@@ -269,8 +269,22 @@
             </div>
             <img src="images/footer.png" alt="transition into contact section" class="contact-footer">
             <div class="contact-section">
-                <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem;">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! </p>
-                <p style="width:80%; margin: 0 auto; text-align: center; font-size: 5rem; padding-bottom: 50px">testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! testing! </p>
+                <div class="contact-box-container">
+                    <form action="/mail.php" method="POST">
+                        <div>
+                            <!-- info -->
+                            <div>
+                                <input type="text" id="fname" name="fname" placeholder="First Name">
+                                <input type="text" id="lname" name="lname" placeholder="Last Name">
+                                <input type="text" id="email" name="email" placeholder="Email Address">
+                            </div>
+                            <!-- message -->
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <!-- submit -->
+                        <input type="submit" id="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </seciton>
         <footer>

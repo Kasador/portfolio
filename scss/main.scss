@@ -540,3 +540,100 @@ footer {
     color: $primary-color;
     cursor: pointer;
 }
+// contact box
+.contact-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    form {
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       background: #222;
+       padding: 30px;
+       align-items: center;
+       margin: 20px;
+       border-radius: 10px;
+       transition: all 0.3s;
+
+        @media screen and (max-width: 500px) {
+            padding: 5px;
+            margin: 10px;
+        }
+       
+       div {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+            @media screen and (max-width: 920px) {
+                flex-wrap: wrap;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin: 20px;
+
+                input {
+                    width: 300px;
+                    padding: 15px 10px;
+                    margin: 20px 10px;
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    border: 2px solid $accent-color;
+                }
+                input:focus {
+                    outline: none;
+                    border-color: lighten($primary-color, 20%);
+                }
+            }
+            textarea {
+                font-size: 1.5rem;
+                padding: 10px;
+                margin: 10px;
+                height: 270px;
+                width: 400px;
+                border-radius: 10px;
+                border: 2px solid $accent-color;
+                transition: all 0.3s;
+
+                @media screen and (max-width: 920px) {
+                    width: 300px;
+                }
+            }
+            textarea:focus {
+                outline: none;
+                border-color: lighten($primary-color, 20%);
+            }
+       }
+       input {
+           font-size: 1.5rem;
+           padding: 10px 15px;
+           margin: 20px;
+           margin-bottom: 0;
+           max-width: 300px;
+           border-radius: 10px;
+           border: 2px solid $accent-color;
+           background: $secondary-color;
+           color: $primary-color;
+           transition: all 0.3s;
+       }
+       input:focus {
+           outline: none;
+       }
+       input:hover {
+           color: $accent-color;
+       }
+    }
+}
+#submit {
+    cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+        margin-bottom: 20px;
+    }
+}

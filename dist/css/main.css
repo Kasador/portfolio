@@ -435,3 +435,81 @@ footer {
   font-size: 5rem;
   color: #222;
   cursor: pointer; }
+
+.contact-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; }
+  .contact-box-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #222;
+    padding: 30px;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    transition: all 0.3s; }
+    @media screen and (max-width: 500px) {
+      .contact-box-container form {
+        padding: 5px;
+        margin: 10px; } }
+    .contact-box-container form div {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media screen and (max-width: 920px) {
+        .contact-box-container form div {
+          flex-wrap: wrap; } }
+      .contact-box-container form div div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px; }
+        .contact-box-container form div div input {
+          width: 300px;
+          padding: 15px 10px;
+          margin: 20px 10px;
+          font-size: 1.5rem;
+          border-radius: 10px;
+          border: 2px solid #B63F55; }
+        .contact-box-container form div div input:focus {
+          outline: none;
+          border-color: #555555; }
+      .contact-box-container form div textarea {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 10px;
+        height: 270px;
+        width: 400px;
+        border-radius: 10px;
+        border: 2px solid #B63F55;
+        transition: all 0.3s; }
+        @media screen and (max-width: 920px) {
+          .contact-box-container form div textarea {
+            width: 300px; } }
+      .contact-box-container form div textarea:focus {
+        outline: none;
+        border-color: #555555; }
+    .contact-box-container form input {
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      margin: 20px;
+      margin-bottom: 0;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #B63F55;
+      background: #fff;
+      color: #222;
+      transition: all 0.3s; }
+    .contact-box-container form input:focus {
+      outline: none; }
+    .contact-box-container form input:hover {
+      color: #B63F55; }
+
+#submit {
+  cursor: pointer; }
+  @media screen and (max-width: 500px) {
+    #submit {
+      margin-bottom: 20px; } }
