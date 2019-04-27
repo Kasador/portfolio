@@ -610,30 +610,28 @@ footer {
                 border-color: lighten($primary-color, 20%);
             }
        }
-       input {
-           font-size: 1.5rem;
-           padding: 10px 15px;
-           margin: 20px;
-           margin-bottom: 0;
-           max-width: 300px;
-           border-radius: 10px;
-           border: 2px solid $accent-color;
-           background: $secondary-color;
-           color: $primary-color;
-           transition: all 0.3s;
-       }
-       input:focus {
-           outline: none;
-       }
-       input:hover {
-           color: $accent-color;
-       }
     }
 }
 #submit {
     cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    margin: 20px;
+    margin-bottom: 0;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 2px solid $accent-color;
+    background: $secondary-color;
+    color: $primary-color;
+    transition: all 0.3s;
 
     @media screen and (max-width: 500px) {
         margin-bottom: 20px;
     }
+}
+#submit:hover {
+    color: $accent-color;
+}
+#submit:focus {
+    outline: none;
 }

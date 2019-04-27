@@ -492,24 +492,25 @@ footer {
       .contact-box-container form div textarea:focus {
         outline: none;
         border-color: #555555; }
-    .contact-box-container form input {
-      font-size: 1.5rem;
-      padding: 10px 15px;
-      margin: 20px;
-      margin-bottom: 0;
-      max-width: 300px;
-      border-radius: 10px;
-      border: 2px solid #B63F55;
-      background: #fff;
-      color: #222;
-      transition: all 0.3s; }
-    .contact-box-container form input:focus {
-      outline: none; }
-    .contact-box-container form input:hover {
-      color: #B63F55; }
 
 #submit {
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  margin: 20px;
+  margin-bottom: 0;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #B63F55;
+  background: #fff;
+  color: #222;
+  transition: all 0.3s; }
   @media screen and (max-width: 500px) {
     #submit {
       margin-bottom: 20px; } }
+
+#submit:hover {
+  color: #B63F55; }
+
+#submit:focus {
+  outline: none; }
