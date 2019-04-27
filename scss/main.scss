@@ -202,18 +202,51 @@ nav {
     }
     // flags
     .flags {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 900px) {
+            justify-content: start;
+        }
+    }
+    .flags-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flags-container-first {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (max-width: 900px) {
+            position: relative;
+            top: 0px;
+            left: -60px;
+        }
+    }
+    .en, .es {
+        transition: all 0.3s;
+    }
+    .english {
+        margin-left: 50px;
+        transition: all 0.3s;
+
+        @media screen and (max-width: 900px) {
+            margin-left: 20px;
+        }
+    }
+    .flags-images {
+        display: block;
         width: 60px;
         height: 40px;
         cursor: pointer;
         border: 3px solid $secondary-color;
         border-radius: 10px;
         margin: 5px;
-        margin-left: 20px;
-
-        @media screen and (max-width: 900px) {
-            position: relative;
-            left: -60px;
-        }
     }
 }
 // stick nav & animatation
@@ -225,17 +258,17 @@ nav {
     display: none;
     transition: all 0.3s;
 
-    img {
-        width: 60px;
-        height: 40px;
-        cursor: pointer;
-        border: 3px solid $secondary-color;
-        border-radius: 10px;
-        position: relative;
-        left: 0px;
-        margin: 5px;
-        margin-left: 20px;
-    }
+    // img {
+    //     width: 60px;
+    //     height: 40px;
+    //     cursor: pointer;
+    //     border: 3px solid $secondary-color;
+    //     border-radius: 10px;
+    //     position: relative;
+    //     left: 0px;
+    //     margin: 5px;
+    //     margin-left: 20px;
+    // }
 }
 // section headers
 .section-header {

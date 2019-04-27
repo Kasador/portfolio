@@ -261,10 +261,9 @@ $(document).ready(function(){
     function sticktothetop() {
     var window_top = $(window).scrollTop();
     var top = $('#stick-here').offset().top;
-        if (window_top > top) {
+        if (window_top >= top) {
             $('#stickThis').slideDown('fast');
             $('.bars').fadeIn('slow');
-
             // on load
             if ($(window).width() +20 <= 900) {
                 $('.menu-container').fadeIn(500);
@@ -308,15 +307,17 @@ function checkMenuClickHome() {
     let isScrolling;
 
     $(window).on('scroll.menu-container-first', () => {
-        window.clearTimeout(isScrolling);
-        isScrolling = setTimeout(function() {
-            $(".menu-container").toggleClass('is-menu-open');
-            $('.mobile-menu').slideToggle();
-            // console.log('Executed');
+        if ($(window).width() +20 <= 900) {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(function() {
+                $(".menu-container").toggleClass('is-menu-open');
+                $('.mobile-menu').slideToggle();
+                // console.log('Executed');
 
-            // $(document).off('scroll.menu-container-first');
-            $(window).unbind( "scroll.menu-container-first" );
-        }, 66);
+                // $(document).off('scroll.menu-container-first');
+                $(window).unbind( "scroll.menu-container-first" );
+            }, 66);
+        }
     });
 }
 menuBtnBegin.on('click', () => {
@@ -354,7 +355,9 @@ function contactColor() {
         menuItemColor = $('.menu-flex a'),
         menuIconColor = $('.bars span'),
         menuIconColor1 = $('.other-bar'),
-        menuSideBorders = $('.mobile-menu');
+        menuSideBorders = $('.mobile-menu'),
+        flagBorderColor = $('.flags-images'),
+        langTextColor = $('.en, .es');
 
     navColor.css('background-color', 'white');
     menuItemColor.css('color', '#B63F55');
@@ -362,13 +365,17 @@ function contactColor() {
     menuIconColor1.css('background-color', '#B63F55');
     menuSideBorders.css('border-color', 'white');
     menuSideBorders.css('border-top-color', '#222');
+    flagBorderColor.css('border-color', '#222');
+    langTextColor.css('color', '#B63F55');
 }
 function OthersColor() {
     let navColor = $('nav'),
         menuItemColor = $('.menu-flex a'),
         menuIconColor = $('.bars span'),
         menuIconColor1 = $('.other-bar'),
-        menuSideBorders = $('.mobile-menu');
+        menuSideBorders = $('.mobile-menu'),
+        flagBorderColor = $('.flags-images'),
+        langTextColor = $('.en, .es');
 
     navColor.css('background-color', '#B63F55');
     menuItemColor.css('color', 'white');
@@ -376,6 +383,8 @@ function OthersColor() {
     menuIconColor1.css('background-color', 'white');
     menuSideBorders.css('border-color', '#B63F55');
     menuSideBorders.css('border-top-color', '#222');
+    flagBorderColor.css('border-color', 'white');
+    langTextColor.css('color', 'white');
 }
 $(document).on('scroll', () => {
     removeActiveAll();
@@ -436,3 +445,24 @@ mobileMenuItems.on('click', () => {
 
 // get current year for footer
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
+// hover color for language text 
+$('.flags-images').hover( function (){
+    let flagSrc = $(this).attr('src');
+    
+    if (flagSrc == 'images/usa.png') {
+        $('.en').css('color', '#222');
+    } else if (flagSrc == 'images/spain.png') {
+        $('.es').css('color', '#222');
+    }
+    console.log('mouse enter');
+}, function() {
+    let flagSrc = $(this).attr('src');
+
+    if (flagSrc == 'images/usa.png') {
+        $('.en').css('color', 'white');
+    } else if (flagSrc == 'images/spain.png') {
+        $('.es').css('color', 'white');
+    }
+    console.log('mouse out');
+});

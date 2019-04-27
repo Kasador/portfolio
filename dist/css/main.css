@@ -148,17 +148,42 @@ nav {
       border-bottom: 5px solid #222;
       transition: all 0.3s; }
   nav .flags {
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 900px) {
+      nav .flags {
+        justify-content: start; } }
+  nav .flags-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  nav .flags-container-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    @media screen and (max-width: 900px) {
+      nav .flags-container-first {
+        position: relative;
+        top: 0px;
+        left: -60px; } }
+  nav .en, nav .es {
+    transition: all 0.3s; }
+  nav .english {
+    margin-left: 50px;
+    transition: all 0.3s; }
+    @media screen and (max-width: 900px) {
+      nav .english {
+        margin-left: 20px; } }
+  nav .flags-images {
+    display: block;
     width: 60px;
     height: 40px;
     cursor: pointer;
     border: 3px solid #fff;
     border-radius: 10px;
-    margin: 5px;
-    margin-left: 20px; }
-    @media screen and (max-width: 900px) {
-      nav .flags {
-        position: relative;
-        left: -60px; } }
+    margin: 5px; }
 
 #stickThis {
   margin-top: 0;
@@ -167,16 +192,6 @@ nav {
   z-index: 9999;
   display: none;
   transition: all 0.3s; }
-  #stickThis img {
-    width: 60px;
-    height: 40px;
-    cursor: pointer;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    position: relative;
-    left: 0px;
-    margin: 5px;
-    margin-left: 20px; }
 
 .section-header {
   font-size: 4rem;
