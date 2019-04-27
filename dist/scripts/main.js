@@ -272,7 +272,7 @@ $(document).ready(function(){
                 $('.menu-container').css('display', 'none');
             }
             // on window resize
-            $( window ).resize( () => {
+            $(window).resize( () => {
                 if ($(window).width() + 20 <= 900) {
                     $('.menu-container').fadeIn(500);
                 } else {
@@ -289,9 +289,43 @@ $(document).ready(function(){
         sticktothetop();
     });
 });
+// menu button in the start
+let menuBtnBegin = $('.menu-container-first');
+if ($(window).width() +20 <= 900) {
+    menuBtnBegin.fadeIn(500);
+} else {
+    menuBtnBegin.css('display', 'none');
+}
+// on window resize
+$( window ).resize( () => {
+    if ($(window).width() + 20 <= 900) {
+        menuBtnBegin.fadeIn(500);
+    } else {
+        menuBtnBegin.css('display', 'none');
+    }
+});
+function checkMenuClickHome() {
+    let isScrolling;
+
+    $(window).on('scroll.menu-container-first', () => {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function() {
+            $(".menu-container").toggleClass('is-menu-open');
+            $('.mobile-menu').slideToggle();
+            // console.log('Executed');
+
+            // $(document).off('scroll.menu-container-first');
+            $(window).unbind( "scroll.menu-container-first" );
+        }, 66);
+    });
+}
+menuBtnBegin.on('click', () => {
+    checkMenuClickHome();
+});
 // menu js
 $('.menu-container').on('click', () => {
     $(".menu-container").toggleClass('is-menu-open');
+    $('.mobile-menu').slideToggle();
 });
   
 // arrow call to action variables
@@ -315,19 +349,51 @@ function removeActiveAll() {
 // function to check condition
 const checkCondition = (id) => $(this).scrollTop() >= $('#'+id).position().top;
 // on scroll, check condition, add active based on condition bool value
+function contactColor() {
+    let navColor = $('nav'),
+        menuItemColor = $('.menu-flex a'),
+        menuIconColor = $('.bars span'),
+        menuIconColor1 = $('.other-bar'),
+        menuSideBorders = $('.mobile-menu');
+
+    navColor.css('background-color', 'white');
+    menuItemColor.css('color', '#B63F55');
+    menuIconColor.css('background-color', '#B63F55');
+    menuIconColor1.css('background-color', '#B63F55');
+    menuSideBorders.css('border-color', 'white');
+    menuSideBorders.css('border-top-color', '#222');
+}
+function OthersColor() {
+    let navColor = $('nav'),
+        menuItemColor = $('.menu-flex a'),
+        menuIconColor = $('.bars span'),
+        menuIconColor1 = $('.other-bar'),
+        menuSideBorders = $('.mobile-menu');
+
+    navColor.css('background-color', '#B63F55');
+    menuItemColor.css('color', 'white');
+    menuIconColor.css('background-color', 'white')
+    menuIconColor1.css('background-color', 'white');
+    menuSideBorders.css('border-color', '#B63F55');
+    menuSideBorders.css('border-top-color', '#222');
+}
 $(document).on('scroll', () => {
     removeActiveAll();
     if( checkCondition('contact') ) {
         $('.contact').addClass('active');
+        contactColor();
     } 
     else if( checkCondition('portfolio') ) {
         $('.portfolio').addClass('active');
+        OthersColor();
     }
     else if( checkCondition('about') ) {
         $('.about').addClass('active');
+        OthersColor();
     } 
     else if( checkCondition('home') ) {
         $('.home').addClass('active');
+        OthersColor();
     } 
 });
 // animation of progress bars
@@ -357,17 +423,7 @@ var options = {
 }
 var typed = new Typed(".header-sub-title", options);
 
-// open menu
-$('.menu-container').on('click', () => {
-    $('.mobile-menu').slideToggle();
-});
-
 // click items mobile menu
-let mobileHome = $('.mobile-home'),
-    mobileAbout = $('.mobile-about'),
-    mobilePortfolio = $('.mobile-portfolio');
-    mobileContact = $('.mobile-contact');
-
 let mobileMenuItems = $('.mobile-menu-item');
 
 mobileMenuItems.on('click', () => {
