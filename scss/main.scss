@@ -339,8 +339,13 @@ nav {
             width: 250px;
             height: 250px;
             border-radius: 100%;
-            // padding: 5px;
             margin: 10px;
+            transition: all 0.3s;
+            
+            @media screen and (max-width: 900px) {
+                width: 200px;
+                height: 200px;
+            }
         }
         p {
             font-size: 1.5rem;
@@ -349,6 +354,12 @@ nav {
 
             @media screen and (max-width: 1400px) {
                 width: 80%;
+            }
+            @media screen and (max-width: 900px) {
+                padding: 1rem 0rem;
+            }
+            @media screen and (max-width: 900px) {
+                font-size: 1.2rem;
             }
 
             span {
@@ -366,8 +377,11 @@ nav {
     @media screen and (max-width: 1400px) {
         width: 80%;
     }
+    @media screen and (max-width: 750px) {
+        width: 95%;
+    }
 }
-.skills-text{
+.skills-text {
     display: flex;
     flex-direction: row;
     width: 280px;
@@ -375,10 +389,19 @@ nav {
     justify-content: flex-end;
     border-right: 2px solid lightgray;
 
+    @media screen and (max-width: 650px) {
+        border-right: none;
+        width: 100%;
+    }
+
     h1 {
         font-size: 1.3rem;
         padding: 5px;
         margin-right: 5px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 1.0rem;
+        }
     }
     i {
         font-size: 2.5rem;
@@ -396,6 +419,10 @@ nav {
     flex-direction: row;
     align-items: center;
     padding: 5px;
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+    }
 }
 .my-progress {
     width: 100%;

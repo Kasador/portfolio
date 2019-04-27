@@ -265,7 +265,12 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 100%;
-      margin: 10px; }
+      margin: 10px;
+      transition: all 0.3s; }
+      @media screen and (max-width: 900px) {
+        .about-me div img {
+          width: 200px;
+          height: 200px; } }
     .about-me div p {
       font-size: 1.5rem;
       padding: 1rem;
@@ -273,6 +278,12 @@ nav {
       @media screen and (max-width: 1400px) {
         .about-me div p {
           width: 80%; } }
+      @media screen and (max-width: 900px) {
+        .about-me div p {
+          padding: 1rem 0rem; } }
+      @media screen and (max-width: 900px) {
+        .about-me div p {
+          font-size: 1.2rem; } }
       .about-me div p span {
         color: #B63F55; }
 
@@ -284,6 +295,9 @@ nav {
   @media screen and (max-width: 1400px) {
     .about-skills {
       width: 80%; } }
+  @media screen and (max-width: 750px) {
+    .about-skills {
+      width: 95%; } }
 
 .skills-text {
   display: flex;
@@ -292,10 +306,17 @@ nav {
   align-items: center;
   justify-content: flex-end;
   border-right: 2px solid lightgray; }
+  @media screen and (max-width: 650px) {
+    .skills-text {
+      border-right: none;
+      width: 100%; } }
   .skills-text h1 {
     font-size: 1.3rem;
     padding: 5px;
     margin-right: 5px; }
+    @media screen and (max-width: 750px) {
+      .skills-text h1 {
+        font-size: 1.0rem; } }
   .skills-text i {
     font-size: 2.5rem;
     padding: 5px;
@@ -310,6 +331,9 @@ nav {
   flex-direction: row;
   align-items: center;
   padding: 5px; }
+  @media screen and (max-width: 650px) {
+    .progress {
+      flex-direction: column; } }
 
 .my-progress {
   width: 100%;
