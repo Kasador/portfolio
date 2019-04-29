@@ -391,18 +391,22 @@ $(document).on('scroll', () => {
     if( checkCondition('contact') ) {
         $('.contact').addClass('active');
         contactColor();
+        contactLangHover();
     } 
     else if( checkCondition('portfolio') ) {
         $('.portfolio').addClass('active');
         OthersColor();
+        otherLangHover();
     }
     else if( checkCondition('about') ) {
         $('.about').addClass('active');
         OthersColor();
+        otherLangHover();
     } 
     else if( checkCondition('home') ) {
         $('.home').addClass('active');
         OthersColor();
+        otherLangHover();
     } 
 });
 // animation of progress bars
@@ -446,23 +450,46 @@ mobileMenuItems.on('click', () => {
 // get current year for footer
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
-// hover color for language text 
-$('.flags-images').hover( function (){
-    let flagSrc = $(this).attr('src');
+// hover color for language text
+function contactLangHover() {
+    $('.flags-images').hover( function (){
+        let flagSrc = $(this).attr('src');
+        
+        if (flagSrc == 'images/usa.png') {
+            $('.en').css('color', '#222');
+        } else if (flagSrc == 'images/spain.png') {
+            $('.es').css('color', '#222');
+        }
+        console.log('mouse enter');
+    }, function() {
+        let flagSrc = $(this).attr('src');
     
-    if (flagSrc == 'images/usa.png') {
-        $('.en').css('color', '#222');
-    } else if (flagSrc == 'images/spain.png') {
-        $('.es').css('color', '#222');
-    }
-    console.log('mouse enter');
-}, function() {
-    let flagSrc = $(this).attr('src');
-
-    if (flagSrc == 'images/usa.png') {
-        $('.en').css('color', 'white');
-    } else if (flagSrc == 'images/spain.png') {
-        $('.es').css('color', 'white');
-    }
-    console.log('mouse out');
-});
+        if (flagSrc == 'images/usa.png') {
+            $('.en').css('color', '#B63F55');
+        } else if (flagSrc == 'images/spain.png') {
+            $('.es').css('color', '#B63F55');
+        }
+        console.log('mouse out');
+    });
+}
+function otherLangHover() {
+    $('.flags-images').hover( function (){
+        let flagSrc = $(this).attr('src');
+        
+        if (flagSrc == 'images/usa.png') {
+            $('.en').css('color', '#222');
+        } else if (flagSrc == 'images/spain.png') {
+            $('.es').css('color', '#222');
+        }
+        console.log('mouse enter');
+    }, function() {
+        let flagSrc = $(this).attr('src');
+    
+        if (flagSrc == 'images/usa.png') {
+            $('.en').css('color', 'white');
+        } else if (flagSrc == 'images/spain.png') {
+            $('.es').css('color', 'white');
+        }
+        console.log('mouse out');
+    });
+}
