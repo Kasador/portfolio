@@ -666,3 +666,6 @@ footer {
       border-color: #222;
       width: 100%;
       margin: 0; }
+
+.hideme {
+  opacity: 0; }
