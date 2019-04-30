@@ -257,18 +257,6 @@ nav {
     z-index: 9999;
     display: none;
     transition: all 0.3s;
-
-    // img {
-    //     width: 60px;
-    //     height: 40px;
-    //     cursor: pointer;
-    //     border: 3px solid $secondary-color;
-    //     border-radius: 10px;
-    //     position: relative;
-    //     left: 0px;
-    //     margin: 5px;
-    //     margin-left: 20px;
-    // }
 }
 // section headers
 .section-header {
@@ -330,6 +318,10 @@ nav {
         font-size: 1.5rem;
         padding: 10px 25px;
         color: #333;
+
+        @media screen and (max-width: 650px) {
+            font-size: 1.2rem;
+        }
     }
 }
 .about-intro {

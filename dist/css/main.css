@@ -243,6 +243,9 @@ nav {
     font-size: 1.5rem;
     padding: 10px 25px;
     color: #333; }
+    @media screen and (max-width: 650px) {
+      .icons p {
+        font-size: 1.2rem; } }
 
 .about-intro {
   display: flex;
