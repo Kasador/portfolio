@@ -298,10 +298,11 @@ nav {
           width: 80%; } }
       @media screen and (max-width: 900px) {
         .about-me div p {
-          padding: 1rem 0rem; } }
-      @media screen and (max-width: 900px) {
-        .about-me div p {
+          padding: 1rem 0rem;
           font-size: 1.2rem; } }
+      @media screen and (max-width: 600px) {
+        .about-me div p {
+          width: 90%; } }
       .about-me div p span {
         color: #B63F55; }
 
@@ -597,3 +598,71 @@ footer {
 
 #submit:focus {
   outline: none; }
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  transition: all 0.3s; }
+  @media screen and (max-width: 1100px) {
+    .projects {
+      flex-direction: column; } }
+
+.project-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #222;
+  border-radius: 10px;
+  margin: 20px auto; }
+  .project-items div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .project-items div img {
+      width: 450px;
+      height: 350px;
+      border-bottom: 5px solid #222;
+      transition: all 0.3s; }
+      @media screen and (max-width: 1600px) {
+        .project-items div img {
+          width: 350px;
+          height: 250px; } }
+      @media screen and (max-width: 1250px) {
+        .project-items div img {
+          width: 300px;
+          height: 200px; } }
+      @media screen and (max-width: 1100px) {
+        .project-items div img {
+          width: 450px;
+          height: 350px; } }
+      @media screen and (max-width: 600px) {
+        .project-items div img {
+          width: 300px;
+          height: 200px; } }
+    .project-items div span {
+      font-size: 2rem;
+      padding: 5px;
+      background-color: #B63F55;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      transition: all 0.3s;
+      cursor: pointer; }
+      @media screen and (max-width: 1250px) {
+        .project-items div span {
+          font-size: 1.5rem; } }
+      @media screen and (max-width: 1100px) {
+        .project-items div span {
+          font-size: 2rem; } }
+    .project-items div span:hover {
+      color: #222;
+      background-color: #fff; }
+    .project-items div hr {
+      border-width: 2px;
+      border-color: #222;
+      width: 100%;
+      margin: 0; }

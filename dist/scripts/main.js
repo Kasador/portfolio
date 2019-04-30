@@ -437,9 +437,17 @@ var options = {
 var typed = new Typed(".header-sub-title", options);
 
 // click items mobile menu
-let mobileMenuItems = $('.mobile-menu-item');
+let mobileMenuItems = $('.mobile-menu-item'),
+    aMobile = $('.a-mobile');
 
-mobileMenuItems.on('click', () => {
+// mobileMenuItems.on('click', () => {
+//     $('.mobile-menu').slideToggle();
+
+//     if ($('.menu-container').hasClass('is-menu-open')) {
+//         $('.menu-container').removeClass('is-menu-open');
+//     }
+// });
+aMobile.on('click', () => {
     $('.mobile-menu').slideToggle();
 
     if ($('.menu-container').hasClass('is-menu-open')) {

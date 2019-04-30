@@ -382,9 +382,10 @@ nav {
             }
             @media screen and (max-width: 900px) {
                 padding: 1rem 0rem;
-            }
-            @media screen and (max-width: 900px) {
                 font-size: 1.2rem;
+            }
+            @media screen and (max-width: 600px) {
+                width: 90%;
             }
 
             span {
@@ -737,4 +738,83 @@ footer {
 }
 #submit:focus {
     outline: none;
+}
+// projects and portfolio page
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 1100px) {
+        flex-direction: column;
+    }
+}
+.project-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid $primary-color;
+    border-radius: 10px;
+    margin: 20px auto;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 450px;
+            height: 350px;
+            border-bottom: 5px solid $primary-color;
+            transition: all 0.3s;
+
+            @media screen and (max-width:1600px) {
+                width: 350px;
+                height: 250px;
+            }
+            @media screen and (max-width: 1250px) {
+                width: 300px;
+                height: 200px;
+            }
+            @media screen and (max-width: 1100px) {
+                width: 450px;
+                height: 350px;
+            }
+            @media screen and (max-width: 600px) {
+                width: 300px;
+                height: 200px;
+            }
+        }
+        span {
+            font-size: 2rem;
+            padding: 5px;
+            background-color: $accent-color;
+            width: 100%;
+            text-align: center;
+            color: $secondary-color;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            @media screen and (max-width: 1250px) {
+                font-size: 1.5rem;
+            }
+            @media screen and (max-width: 1100px) {
+                font-size: 2rem;
+            }
+        }
+        span:hover {
+            color: $primary-color;
+            background-color: $secondary-color;
+        }
+        hr {
+            border-width: 2px;
+            border-color: $primary-color;
+            width: 100%;
+            margin: 0;
+        }
+    }
 }
