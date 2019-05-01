@@ -438,34 +438,24 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object - 100 ) {
+            if( bottom_of_window > bottom_of_object - 200 ) {
                 $(this).animate({'opacity':'1'}, 800);
             } 
         }); 
         // skill bars progress on scroll
         // -============================ F I X    T H I S ========= Does not work on mobile, too slow
-        $('.progress').each( function(){
-            let bottom_of_object = $(this).position().top + $(this).outerHeight(),
-                bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ) {
-                $('.bar').each( function(){
-                    var bottomObject = $(this).position().top + $(this).outerHeight();
-                    var bottomWindow = $(window).scrollTop() + $(window).height();
-                    
-                    if( bottomWindow > bottomObject ) {
-                        let data = $(this).attr('data-percent'),
-                            width = 10,
-                            percent = data + '%';
+        // $('.bar').each( function(){
+        //     let bottomObject = $(this).position().top + $(this).outerHeight(),
+        //         bottomWindow = $(window).scrollTop() + $(window).height();
+            
+        //     if( bottomWindow > bottomObject - 200 ) {
+        //         let data = $(this).attr('data-percent'),
+        //             percent = data + '%';
 
-                        if ( width <= data) {
-                            $(this).animate({'width': percent}, 1500);
-                            $(this).text(percent);
-                        }
-                    } 
-                }); 
-            } 
-        });
+        //         $(this).animate({'width': percent}, 1500);
+        //         $(this).text(percent);
+        //     } 
+        // });
     });
 });
 // typing effect
