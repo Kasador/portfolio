@@ -442,13 +442,11 @@ $(document).ready(function() {
                 $(this).animate({'opacity':'1'}, 800);
             } 
         }); 
-    });
-// skill bars progress on scroll
-    $(window).scroll( function(){
+        // skill bars progress on scroll
+        // -============================ F I X    T H I S ========= Does not work on mobile, too slow
         $('.progress').each( function(){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
+            let bottom_of_object = $(this).position().top + $(this).outerHeight(),
+                bottom_of_window = $(window).scrollTop() + $(window).height();
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ) {
                 $('.bar').each( function(){
@@ -467,7 +465,7 @@ $(document).ready(function() {
                     } 
                 }); 
             } 
-        }); 
+        });
     });
 });
 // typing effect
