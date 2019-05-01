@@ -410,24 +410,66 @@ $(document).on('scroll', () => {
     } 
 });
 // animation of progress bars
-let progressBars = document.querySelectorAll('.bar');
-// went from 200 lines of code to this! (DRY code)
-function move() {
-    for (let i=0; i < progressBars.length; i++) {
-        let bar = progressBars[i];
-        let width = 10;
-        let moveBar = setInterval(checkBar, 20);
-        function checkBar() {
-            if (width >= bar.getAttribute('data-percent')) {
-                clearInterval(moveBar);
-            } else {
-                width++; 
-                bar.style.width = width + '%'; 
-                bar.innerHTML = width * 1 + '%';
-            }
-        }
-    }
-}
+// let progressBars = document.querySelectorAll('.bar');
+// // went from 200 lines of code to this! (DRY code)
+// function move() {
+//     for (let i=0; i < progressBars.length; i++) {
+//         let bar = progressBars[i];
+//         let width = 10;
+//         let moveBar = setInterval(checkBar, 20);
+//         function checkBar() {
+//             if (width >= bar.getAttribute('data-percent')) {
+//                 clearInterval(moveBar);
+//             } else {
+//                 width++;
+//                 bar.style.width = width + '%'; 
+//                 bar.innerHTML = width * 1 + '%';
+//             }
+//         }
+//     }
+// }
+// Haha, ok... it's better now. Code block starts on line 447 of main.js
+
+// fade in on scroll 
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.hideme').each( function(){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ) {
+                $(this).animate({'opacity':'1'}, 800);   
+            } 
+        }); 
+    });
+// skill bars progress on scroll
+    $(window).scroll( function(){
+        $('.progress').each( function(){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ) {
+                $('.bar').each( function(){
+                    var bottomObject = $(this).position().top + $(this).outerHeight();
+                    var bottomWindow = $(window).scrollTop() + $(window).height();
+                    
+                    if( bottomWindow > bottomObject ) {
+                        let data = $(this).attr('data-percent'),
+                            width = 10,
+                            percent = data + '%';
+
+                        if ( width <= data) {
+                            $(this).animate({'width': percent}, 1500);
+                            $(this).text(percent);
+                        }
+                    } 
+                }); 
+            } 
+        }); 
+    });
+});
 // typing effect
 var options = {
   stringsElement: '#typed-sub', 
@@ -437,16 +479,8 @@ var options = {
 var typed = new Typed(".header-sub-title", options);
 
 // click items mobile menu
-let mobileMenuItems = $('.mobile-menu-item'),
-    aMobile = $('.a-mobile');
+let aMobile = $('.a-mobile');
 
-// mobileMenuItems.on('click', () => {
-//     $('.mobile-menu').slideToggle();
-
-//     if ($('.menu-container').hasClass('is-menu-open')) {
-//         $('.menu-container').removeClass('is-menu-open');
-//     }
-// });
 aMobile.on('click', () => {
     $('.mobile-menu').slideToggle();
 
@@ -501,19 +535,3 @@ function otherLangHover() {
         console.log('mouse out');
     });
 }
-// fade in on scroll 
-$(document).ready(function() {
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-        /* Check the location of each desired element */
-        $('.hideme').each( function(){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ) {
-                $(this).animate({'opacity':'1'},700);   
-            } 
-        }); 
-    });
-});
