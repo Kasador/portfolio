@@ -330,10 +330,10 @@ nav {
     align-content: center;
     align-items: center;
     flex-direction: row;
-    width: 100%;
-    margin-top: 30px;
+    width: 80%;
+    margin: 10px auto;
 
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 1200px) {
         flex-direction: column;
     }
 }
@@ -344,11 +344,17 @@ nav {
     align-content: center;
     box-align: center;
     box-pack: center;
-    width: 35%;
+    transition: all 0.3s;
 
-    @media screen and (max-width: 1400px) {
-        width: 80%;
+    @media screen and (max-width: 1200px) {
+        width: 85%;
         margin-bottom: 20px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 95%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 100%;
     }
 
     div {
@@ -367,25 +373,27 @@ nav {
             margin: 10px;
             transition: all 0.3s;
             
-            @media screen and (max-width: 900px) {
+            @media screen and (max-width: 1300px) {
                 width: 200px;
                 height: 200px;
             }
         }
         p {
-            font-size: 1.5rem;
-            padding: 1rem;
+            font-size: 1.4rem;
+            padding: 1rem 3rem;
             text-indent: 2rem;
+            transition: all 0.3s;
+            color: #333;
 
             @media screen and (max-width: 1400px) {
-                width: 80%;
+                padding: 1rem 1rem;
             }
-            @media screen and (max-width: 900px) {
-                padding: 1rem 0rem;
-                font-size: 1.2rem;
+            @media screen and (max-width: 1300px) {
+                font-size: 1.3rem;
             }
             @media screen and (max-width: 600px) {
-                width: 90%;
+                font-size: 1.3rem;
+                padding: 1rem;
             }
 
             span {
@@ -395,76 +403,62 @@ nav {
     }
 }
 .about-skills {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
-    @media screen and (max-width: 1400px) {
-        width: 80%;
-    }
-    @media screen and (max-width: 750px) {
-        width: 95%;
-    }
-}
-.skills-text {
     display: flex;
     flex-direction: row;
-    width: 280px;
-    align-items: center;
-    justify-content: flex-end;
-    border-right: 2px solid lightgray;
+    align-content: center;
 
-    @media screen and (max-width: 650px) {
-        border-right: none;
-        width: 100%;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: 30px;
+        transition: all 0.3s;
+
+        @media screen and (max-width:1500px) {
+            margin: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            margin-bottom: 0;
+        }
+    }
+}
+.skills {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    @media screen and (max-width: 700px) {
+        margin: 5px 0px;
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 2rem;
         padding: 5px;
         margin-right: 5px;
 
-        @media screen and (max-width: 750px) {
-            font-size: 1.0rem;
+        @media screen and (max-width: 600px) {
+            font-size: 2.5rem;
         }
     }
     i {
-        font-size: 2.5rem;
+        font-size: 4rem;
         padding: 5px;
         color: $accent-color;
         margin-right: 10px;
     }
     img {
-        width: 50px;
+        width: 75px;
         margin-right: 10px;
     }
-}
-.progress {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-
-    @media screen and (max-width: 650px) {
-        flex-direction: column;
-    }
-}
-.my-progress {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 10px;
-    margin-left: 15px;
-    padding: 5px;
-}
-.bar {
-    height: 30px;
-    background-color: $accent-color;
-    text-align: center; /* To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: $secondary-color;
-    border-radius: 10px;
-    width: 10%;
 }
 // menu button SASS from https://codepen.io/anon/pen/wZjbMG
 $menu-color: $secondary-color;

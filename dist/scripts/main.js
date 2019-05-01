@@ -409,27 +409,6 @@ $(document).on('scroll', () => {
         otherLangHover();
     } 
 });
-// animation of progress bars
-// let progressBars = document.querySelectorAll('.bar');
-// // went from 200 lines of code to this! (DRY code)
-// function move() {
-//     for (let i=0; i < progressBars.length; i++) {
-//         let bar = progressBars[i];
-//         let width = 10;
-//         let moveBar = setInterval(checkBar, 20);
-//         function checkBar() {
-//             if (width >= bar.getAttribute('data-percent')) {
-//                 clearInterval(moveBar);
-//             } else {
-//                 width++;
-//                 bar.style.width = width + '%'; 
-//                 bar.innerHTML = width * 1 + '%';
-//             }
-//         }
-//     }
-// }
-// Haha, ok... it's better now. Code block starts on line 447 of main.js
-
 // fade in on scroll 
 $(document).ready(function() {
     $(window).scroll( function(){
@@ -438,24 +417,10 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object - 200 ) {
+            if( bottom_of_window > bottom_of_object - 100 ) {
                 $(this).animate({'opacity':'1'}, 800);
             } 
         }); 
-        // skill bars progress on scroll
-        // -============================ F I X    T H I S ========= Does not work on mobile, too slow
-        // $('.bar').each( function(){
-        //     let bottomObject = $(this).position().top + $(this).outerHeight(),
-        //         bottomWindow = $(window).scrollTop() + $(window).height();
-            
-        //     if( bottomWindow > bottomObject - 200 ) {
-        //         let data = $(this).attr('data-percent'),
-        //             percent = data + '%';
-
-        //         $(this).animate({'width': percent}, 1500);
-        //         $(this).text(percent);
-        //     } 
-        // });
     });
 });
 // typing effect

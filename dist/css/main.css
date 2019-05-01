@@ -253,9 +253,9 @@ nav {
   align-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
-  margin-top: 30px; }
-  @media screen and (max-width: 1400px) {
+  width: 80%;
+  margin: 10px auto; }
+  @media screen and (max-width: 1200px) {
     .about-intro {
       flex-direction: column; } }
 
@@ -266,11 +266,17 @@ nav {
   align-content: center;
   box-align: center;
   box-pack: center;
-  width: 35%; }
-  @media screen and (max-width: 1400px) {
+  transition: all 0.3s; }
+  @media screen and (max-width: 1200px) {
     .about-me {
-      width: 80%;
+      width: 85%;
       margin-bottom: 20px; } }
+  @media screen and (max-width: 600px) {
+    .about-me {
+      width: 95%; } }
+  @media screen and (max-width: 500px) {
+    .about-me {
+      width: 100%; } }
   .about-me div {
     display: flex;
     flex-direction: column;
@@ -285,92 +291,76 @@ nav {
       border-radius: 100%;
       margin: 10px;
       transition: all 0.3s; }
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1300px) {
         .about-me div img {
           width: 200px;
           height: 200px; } }
     .about-me div p {
-      font-size: 1.5rem;
-      padding: 1rem;
-      text-indent: 2rem; }
+      font-size: 1.4rem;
+      padding: 1rem 3rem;
+      text-indent: 2rem;
+      transition: all 0.3s;
+      color: #333; }
       @media screen and (max-width: 1400px) {
         .about-me div p {
-          width: 80%; } }
-      @media screen and (max-width: 900px) {
+          padding: 1rem 1rem; } }
+      @media screen and (max-width: 1300px) {
         .about-me div p {
-          padding: 1rem 0rem;
-          font-size: 1.2rem; } }
+          font-size: 1.3rem; } }
       @media screen and (max-width: 600px) {
         .about-me div p {
-          width: 90%; } }
+          font-size: 1.3rem;
+          padding: 1rem; } }
       .about-me div p span {
         color: #B63F55; }
 
 .about-skills {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-  @media screen and (max-width: 1400px) {
-    .about-skills {
-      width: 80%; } }
-  @media screen and (max-width: 750px) {
-    .about-skills {
-      width: 95%; } }
-
-.skills-text {
   display: flex;
   flex-direction: row;
-  width: 280px;
+  align-content: center; }
+  @media screen and (max-width: 600px) {
+    .about-skills {
+      flex-direction: column; } }
+  .about-skills section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 30px;
+    transition: all 0.3s; }
+    @media screen and (max-width: 1500px) {
+      .about-skills section {
+        margin: 10px; } }
+    @media screen and (max-width: 600px) {
+      .about-skills section {
+        margin-bottom: 0; } }
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   align-items: center;
-  justify-content: flex-end;
-  border-right: 2px solid lightgray; }
-  @media screen and (max-width: 650px) {
-    .skills-text {
-      border-right: none;
-      width: 100%; } }
-  .skills-text h1 {
-    font-size: 1.3rem;
+  justify-content: center;
+  margin: 10px; }
+  @media screen and (max-width: 700px) {
+    .skills {
+      margin: 5px 0px; } }
+  .skills h1 {
+    font-size: 2rem;
     padding: 5px;
     margin-right: 5px; }
-    @media screen and (max-width: 750px) {
-      .skills-text h1 {
-        font-size: 1.0rem; } }
-  .skills-text i {
-    font-size: 2.5rem;
+    @media screen and (max-width: 600px) {
+      .skills h1 {
+        font-size: 2.5rem; } }
+  .skills i {
+    font-size: 4rem;
     padding: 5px;
     color: #B63F55;
     margin-right: 10px; }
-  .skills-text img {
-    width: 50px;
+  .skills img {
+    width: 75px;
     margin-right: 10px; }
-
-.progress {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px; }
-  @media screen and (max-width: 650px) {
-    .progress {
-      flex-direction: column; } }
-
-.my-progress {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 10px;
-  margin-left: 15px;
-  padding: 5px; }
-
-.bar {
-  height: 30px;
-  background-color: #B63F55;
-  text-align: center;
-  /* To center it horizontally (if you want) */
-  line-height: 30px;
-  /* To center it vertically */
-  color: #fff;
-  border-radius: 10px;
-  width: 10%; }
 
 .menu-container {
   display: none;
