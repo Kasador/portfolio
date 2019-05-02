@@ -49,6 +49,9 @@ header {
         @media screen and (max-width: 900px) {
           header .header-flex .header-text .header-title {
             font-size: 3rem; } }
+        @media screen and (max-width: 540px) {
+          header .header-flex .header-text .header-title {
+            font-size: 2.7rem; } }
         header .header-flex .header-text .header-title .header-color {
           color: #B63F55; }
       header .header-flex .header-text .header-sub-title {
@@ -61,7 +64,7 @@ header {
             font-size: 3rem; } }
         @media screen and (max-width: 540px) {
           header .header-flex .header-text .header-sub-title {
-            font-size: 2.2rem; } }
+            font-size: 2.3rem; } }
     header .header-flex .social-medias {
       font-size: 5rem;
       color: #222;
@@ -92,7 +95,8 @@ header {
 
 .header-title-flex {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: center; }
 
 .begin {
   color: #222;
@@ -289,8 +293,7 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 100%;
-      margin: 10px;
-      transition: all 0.3s; }
+      margin: 10px; }
       @media screen and (max-width: 1300px) {
         .about-me div img {
           width: 200px;
@@ -299,7 +302,6 @@ nav {
       font-size: 1.4rem;
       padding: 1rem 3rem;
       text-indent: 2rem;
-      transition: all 0.3s;
       color: #333; }
       @media screen and (max-width: 1400px) {
         .about-me div p {
@@ -627,8 +629,8 @@ footer {
           height: 200px; } }
       @media screen and (max-width: 1100px) {
         .project-items div img {
-          width: 450px;
-          height: 350px; } }
+          width: 400px;
+          height: 300px; } }
       @media screen and (max-width: 600px) {
         .project-items div img {
           width: 300px;
@@ -645,9 +647,6 @@ footer {
       @media screen and (max-width: 1250px) {
         .project-items div span {
           font-size: 1.5rem; } }
-      @media screen and (max-width: 1100px) {
-        .project-items div span {
-          font-size: 2rem; } }
     .project-items div span:hover {
       color: #222;
       background-color: #fff; }

@@ -488,3 +488,15 @@ function otherLangHover() {
         console.log('mouse out');
     });
 }
+// flags click to change language
+let flagsLinks = $('.flags-images');
+
+flagsLinks.on('click', function(){
+    let flagSource = $(this).attr('src');
+
+    if (flagSource == 'images/usa.png') {
+        window.location.replace("./index.html");
+    } else if (flagSource == 'images/spain.png') {
+        window.location.replace("./index-esp.html");
+    } 
+});
