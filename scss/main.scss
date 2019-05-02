@@ -786,7 +786,7 @@ footer {
                 height: 200px;
             }
         }
-        span {
+        a {
             font-size: 2rem;
             padding: 5px;
             background-color: $accent-color;
@@ -795,12 +795,13 @@ footer {
             color: $secondary-color;
             transition: all 0.3s;
             cursor: pointer;
+            text-decoration: none;
 
             @media screen and (max-width: 1250px) {
                 font-size: 1.5rem;
             }
         }
-        span:hover {
+        a:hover {
             color: $primary-color;
             background-color: $secondary-color;
         }

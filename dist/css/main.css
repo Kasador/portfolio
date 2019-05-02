@@ -635,7 +635,7 @@ footer {
         .project-items div img {
           width: 300px;
           height: 200px; } }
-    .project-items div span {
+    .project-items div a {
       font-size: 2rem;
       padding: 5px;
       background-color: #B63F55;
@@ -643,11 +643,12 @@ footer {
       text-align: center;
       color: #fff;
       transition: all 0.3s;
-      cursor: pointer; }
+      cursor: pointer;
+      text-decoration: none; }
       @media screen and (max-width: 1250px) {
-        .project-items div span {
+        .project-items div a {
           font-size: 1.5rem; } }
-    .project-items div span:hover {
+    .project-items div a:hover {
       color: #222;
       background-color: #fff; }
     .project-items div hr {
