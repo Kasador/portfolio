@@ -72,10 +72,11 @@ header {
       @media screen and (max-width: 540px) {
         header .header-flex .social-medias {
           font-size: 4rem; } }
-      header .header-flex .social-medias .fab {
+      header .header-flex .social-medias a {
         cursor: pointer;
-        transition: all 0.3s; }
-      header .header-flex .social-medias .fab:hover {
+        transition: all 0.3s;
+        color: #222; }
+      header .header-flex .social-medias a:hover {
         color: #B63F55; }
 
 .color {
@@ -495,9 +496,10 @@ footer {
   font-size: 3rem;
   margin: 10px;
   cursor: pointer; }
-  .social-medias-footer i {
-    transition: all 0.3s; }
-  .social-medias-footer i:hover {
+  .social-medias-footer a {
+    transition: all 0.3s;
+    color: #fff; }
+  .social-medias-footer a:hover {
     color: #B63F55; }
 
 .back-to-top-box {

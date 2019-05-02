@@ -101,11 +101,12 @@ header {
                 font-size: 4rem;
             }
             // social icons
-            .fab {
+            a {
                 cursor: pointer;
                 transition: all 0.3s;
+                color: $primary-color;
             }
-            .fab:hover {
+            a:hover {
                 color: $accent-color;
             }
         }
@@ -622,10 +623,11 @@ footer {
     margin: 10px;
     cursor: pointer;
 
-    i {
+    a {
         transition: all 0.3s;
+        color: $secondary-color;
     }
-    i:hover {
+    a:hover {
         color: $accent-color;
     }
 }
