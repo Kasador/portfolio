@@ -89,28 +89,51 @@ header {
                 }
             }
         }
-        
-
-        // social medias
-        .social-medias {
-            font-size: 5rem;
-            color: $primary-color;
-            transition: all 0.3s;
-
-            @media screen and (max-width: 540px) {
-                font-size: 4rem;
-            }
-            // social icons
-            a {
-                cursor: pointer;
-                transition: all 0.3s;
-                color: $primary-color;
-            }
-            a:hover {
-                color: $accent-color;
-            }
-        }
     }
+}
+ // social medias
+ .social-medias {
+    margin: 10px;
+    font-size: 5rem;
+    color: $primary-color;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 540px) {
+        font-size: 4rem;
+    }
+    // social icons
+    a {
+        cursor: pointer;
+        transition: all 0.3s;
+        color: $primary-color;
+    }
+    a:hover {
+        color: $accent-color;
+    }
+}
+// resume
+.resume {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid $primary-color;
+    background: $accent-color;
+    color: $secondary-color;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.0rem;
+    }
+}
+.resume:hover {
+    border-color: $accent-color;
+    color: $accent-color;
+    background: $secondary-color;
+}
+.resume:focus {
+    outline: none;
 }
 .color {
     color: $accent-color;
@@ -733,7 +756,8 @@ footer {
     }
 }
 #submit:hover {
-    color: $accent-color;
+    color: $secondary-color;
+    background: $accent-color;
 }
 #submit:focus {
     outline: none;
@@ -815,6 +839,11 @@ footer {
             margin: 0;
         }
     }
+}
+// back to top 
+.back-to-top:hover {
+    transition: all 0.3s;
+    color: $accent-color;
 }
 // fade in on scroll
 .hideme {

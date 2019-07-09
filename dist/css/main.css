@@ -65,19 +65,43 @@ header {
         @media screen and (max-width: 540px) {
           header .header-flex .header-text .header-sub-title {
             font-size: 2.3rem; } }
-    header .header-flex .social-medias {
-      font-size: 5rem;
-      color: #222;
-      transition: all 0.3s; }
-      @media screen and (max-width: 540px) {
-        header .header-flex .social-medias {
-          font-size: 4rem; } }
-      header .header-flex .social-medias a {
-        cursor: pointer;
-        transition: all 0.3s;
-        color: #222; }
-      header .header-flex .social-medias a:hover {
-        color: #B63F55; }
+
+.social-medias {
+  margin: 10px;
+  font-size: 5rem;
+  color: #222;
+  transition: all 0.3s; }
+  @media screen and (max-width: 540px) {
+    .social-medias {
+      font-size: 4rem; } }
+  .social-medias a {
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #222; }
+  .social-medias a:hover {
+    color: #B63F55; }
+
+.resume {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 5px solid #222;
+  background: #B63F55;
+  color: #fff;
+  transition: all 0.3s; }
+  @media screen and (max-width: 500px) {
+    .resume {
+      font-size: 1.0rem; } }
+
+.resume:hover {
+  border-color: #B63F55;
+  color: #B63F55;
+  background: #fff; }
+
+.resume:focus {
+  outline: none; }
 
 .color {
   color: #B63F55; }
@@ -588,7 +612,8 @@ footer {
       margin-bottom: 20px; } }
 
 #submit:hover {
-  color: #B63F55; }
+  color: #fff;
+  background: #B63F55; }
 
 #submit:focus {
   outline: none; }
@@ -659,6 +684,10 @@ footer {
       border-color: #222;
       width: 100%;
       margin: 0; }
+
+.back-to-top:hover {
+  transition: all 0.3s;
+  color: #B63F55; }
 
 .hideme {
   opacity: 0; }
