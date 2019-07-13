@@ -85,7 +85,7 @@ header {
                     font-size: 3rem;
                 }
                 @media screen and (max-width: 540px) {
-                    font-size: 2.3rem;
+                    font-size: 2.2rem;
                 }
             }
         }
@@ -330,6 +330,7 @@ nav {
 
     #fix-rocket {
         padding: 30px 35px;
+        box-shadow: 2px 5px 2px #ccc;
     }
     span {
         font-size: 3rem;
@@ -338,6 +339,7 @@ nav {
         border-radius: 100%;
         color: $secondary-color;
         border: 5px solid $accent-color;
+        box-shadow: 2px 5px 2px #ccc;
     }
     h1 {
         font-size: 2.5rem;
@@ -358,7 +360,6 @@ nav {
     justify-content: center;
     align-content: center;
     align-items: center;
-    flex-direction: row;
     width: 80%;
     margin: 10px auto;
 
@@ -368,7 +369,6 @@ nav {
 }
 .about-me {
     display: flex;
-    flex-direction: row;
     align-items: center;
     align-content: center;
     box-align: center;
@@ -400,6 +400,7 @@ nav {
             height: 250px;
             border-radius: 100%;
             margin: 10px;
+            box-shadow: 2px 5px 2px #ccc;
             
             @media screen and (max-width: 1300px) {
                 width: 200px;
@@ -431,60 +432,74 @@ nav {
 }
 .about-skills {
     display: flex;
-    flex-direction: row;
-    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
 
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
+    @media screen and (max-width: 1200px) {
+        margin-top: 10px;
+    }
+}
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.skill-card {
+    width: 600px;
+    border: 5px solid $accent-color;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 2px 2px 2px #ccc;
+    background-color: whitesmoke;
+
+    transition: all 0.3s;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        padding: 10px;
+        text-decoration: underline;
     }
 
-    section {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        margin: 30px;
-        transition: all 0.3s;
-
-        @media screen and (max-width:1500px) {
-            margin: 10px;
-        }
-        @media screen and (max-width: 600px) {
-            margin-bottom: 0;
-        }
+    @media screen and (max-width: 1700px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 700px;
+    }
+    @media screen and (max-width: 900px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 700px) {
+        width: 400px;
+    }
+    @media screen and (max-width: 550px) {
+        width: 300px;
     }
 }
 .skills {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
     justify-content: center;
-    margin: 10px;
+    align-items: center;
+    align-content: center;
 
-    @media screen and (max-width: 700px) {
-        margin: 5px 0px;
-    }
-
-    h1 {
-        font-size: 2rem;
-        padding: 5px;
-        margin-right: 5px;
-
-        @media screen and (max-width: 600px) {
-            font-size: 2.5rem;
-        }
-    }
     i {
-        font-size: 4rem;
-        padding: 5px;
-        color: $accent-color;
-        margin-right: 10px;
-    }
-    img {
-        width: 75px;
-        margin-right: 10px;
+        font-size: 5rem;
+        padding: 10px; 
+
+        @media screen and (max-width: 1300px) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: 5rem;
+        }
+        @media screen and (max-width: 700px) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: 550px) {
+            font-size: 3rem;
+        }
     }
 }
 // menu button SASS from https://codepen.io/anon/pen/wZjbMG
@@ -640,6 +655,10 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 }
 .social-medias-footer {
     font-size: 3rem;

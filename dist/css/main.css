@@ -64,7 +64,7 @@ header {
             font-size: 3rem; } }
         @media screen and (max-width: 540px) {
           header .header-flex .header-text .header-sub-title {
-            font-size: 2.3rem; } }
+            font-size: 2.2rem; } }
 
 .social-medias {
   margin: 10px;
@@ -257,14 +257,16 @@ nav {
   text-align: center;
   margin-top: 20px; }
   .icons #fix-rocket {
-    padding: 30px 35px; }
+    padding: 30px 35px;
+    box-shadow: 2px 5px 2px #ccc; }
   .icons span {
     font-size: 3rem;
     padding: 30px 40px;
     background-color: #222;
     border-radius: 100%;
     color: #fff;
-    border: 5px solid #B63F55; }
+    border: 5px solid #B63F55;
+    box-shadow: 2px 5px 2px #ccc; }
   .icons h1 {
     font-size: 2.5rem;
     padding: 20px; }
@@ -281,7 +283,6 @@ nav {
   justify-content: center;
   align-content: center;
   align-items: center;
-  flex-direction: row;
   width: 80%;
   margin: 10px auto; }
   @media screen and (max-width: 1200px) {
@@ -290,7 +291,6 @@ nav {
 
 .about-me {
   display: flex;
-  flex-direction: row;
   align-items: center;
   align-content: center;
   box-align: center;
@@ -318,7 +318,8 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 100%;
-      margin: 10px; }
+      margin: 10px;
+      box-shadow: 2px 5px 2px #ccc; }
       @media screen and (max-width: 1300px) {
         .about-me div img {
           width: 200px;
@@ -343,51 +344,67 @@ nav {
 
 .about-skills {
   display: flex;
-  flex-direction: row;
-  align-content: center; }
-  @media screen and (max-width: 600px) {
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px; }
+  @media screen and (max-width: 1200px) {
     .about-skills {
-      flex-direction: column; } }
-  .about-skills section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    margin: 30px;
-    transition: all 0.3s; }
-    @media screen and (max-width: 1500px) {
-      .about-skills section {
-        margin: 10px; } }
-    @media screen and (max-width: 600px) {
-      .about-skills section {
-        margin-bottom: 0; } }
+      margin-top: 10px; } }
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px; }
+
+.skill-card {
+  width: 600px;
+  border: 5px solid #B63F55;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 2px 2px 2px #ccc;
+  background-color: whitesmoke;
+  transition: all 0.3s; }
+  .skill-card h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 10px;
+    text-decoration: underline; }
+  @media screen and (max-width: 1700px) {
+    .skill-card {
+      width: 500px; } }
+  @media screen and (max-width: 1200px) {
+    .skill-card {
+      width: 700px; } }
+  @media screen and (max-width: 900px) {
+    .skill-card {
+      width: 500px; } }
+  @media screen and (max-width: 700px) {
+    .skill-card {
+      width: 400px; } }
+  @media screen and (max-width: 550px) {
+    .skill-card {
+      width: 300px; } }
 
 .skills {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
   justify-content: center;
-  margin: 10px; }
-  @media screen and (max-width: 700px) {
-    .skills {
-      margin: 5px 0px; } }
-  .skills h1 {
-    font-size: 2rem;
-    padding: 5px;
-    margin-right: 5px; }
-    @media screen and (max-width: 600px) {
-      .skills h1 {
-        font-size: 2.5rem; } }
+  align-items: center;
+  align-content: center; }
   .skills i {
-    font-size: 4rem;
-    padding: 5px;
-    color: #B63F55;
-    margin-right: 10px; }
-  .skills img {
-    width: 75px;
-    margin-right: 10px; }
+    font-size: 5rem;
+    padding: 10px; }
+    @media screen and (max-width: 1300px) {
+      .skills i {
+        font-size: 4rem; } }
+    @media screen and (max-width: 1200px) {
+      .skills i {
+        font-size: 5rem; } }
+    @media screen and (max-width: 700px) {
+      .skills i {
+        font-size: 4rem; } }
+    @media screen and (max-width: 550px) {
+      .skills i {
+        font-size: 3rem; } }
 
 .menu-container {
   display: none;
@@ -515,6 +532,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
+  @media screen and (max-width: 500px) {
+    footer {
+      font-size: 1.5rem; } }
 
 .social-medias-footer {
   font-size: 3rem;
